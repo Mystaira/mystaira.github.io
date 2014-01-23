@@ -1,0 +1,1091 @@
+<html>
+
+    <head>
+    
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <style type="text/css">
+            
+            label {font-weight:bold;color:#BC8F8F}
+            td {padding:2px}
+
+        </style> 
+        
+        <script type="text/javascript">
+            
+		
+            // currency rate
+            var usdeur = 0.75;
+            var usdToPoints = 100;
+            
+            function calculate(){
+                
+                var customtypeStyle = "<b>Pocky Type:</b> ";
+				var pockytypeStyle = "";
+				var cuplingtypeStyle = "";
+				var customdescStyle = "";
+                var exemptedfromStyle = "<b>Exempted from:</b> ";
+				var commissionformStyle = "<b>Commission Form:</b> ";
+        
+                document.getElementById("resultsDiv").style.display = "none";
+                document.getElementById("stylingDiv").style.display = "none";
+                document.getElementById("customtypeStyleDiv").style.display = "none";
+                document.getElementById("customdescStyleDiv").style.display = "none";
+                document.getElementById("pockytypeStyleDiv").style.display = "none";
+                document.getElementById("cuplingtypeStyleDiv").style.display = "none";
+                document.getElementById("exemptedfromStyleDiv").style.display = "none";
+                document.getElementById("commissionformStyleDiv").style.display = "none";
+        
+                var thisisfor = document.getElementById("thisisfor").value;
+                var customtype = document.getElementById("customtype").value;
+                var pockytype = document.getElementById("pockytype").value;
+                var cuplingtype = document.getElementById("cuplingtype").value;
+                var exemptedfrom = document.getElementById("exemptedfrom").value;
+                
+                /*
+                alert('thisisfor: ' + thisisfor);
+                alert('exemptedfrom: ' + exemptedfrom);
+                */
+        
+                if (thisisfor == 'newcustom') { 
+        
+                    var basePrice1 = 0.0;
+                    var finalPrice1 = 0.0;
+        
+		            if (customtype == 'basiccustom') {
+						if (pockytype == 'plainpocky'){
+							basePrice1 = 10.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i>(A simple smooth coated stick of pocky.)</i><br/>";
+							customtypeStyle += "<i>Plain pocky designs are more on the simple end of things. They may be more or less plain depending on the flavor itself, but I will probably lean towards simple designs.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SandSouffle_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SandSouffle_Pocky.png"></a></p>'; 
+
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $15<br/><b>Contact Information:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $20<br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $10 <br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/></div></td></tr></table>';
+					
+							}
+							
+						} else if (pockytype == 'moussepocky'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i>(A stick of pocky with a smooth frosting-like coating.)</i><br/>";
+							customtypeStyle += "<i></i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/HWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_HWhite_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MGreenTea_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MGreenTea_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MWhite_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'crushpocky'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i>(A stick of pocky covered with crushed pieces of the flavor. Usually a nut flavor, but not always.)</i><br/>";
+							customtypeStyle += "<i>Crush pocky tend to be designed based on them being tough or fighters. They probably won't be that fancy looking, but it all depends on the actual flavor.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ShadowCatmintC_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ShadowCatmintC_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'tsubutsubupocky'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i>(A stick of pocky covered with dried pieces of the flavor. Usually a fruit flavor, but not always.)</i><br/>";
+							customtypeStyle += "<i>TsubuTsubu pocky designs usually have pieces of their flavor strewn about the design.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DragonFruit_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DragonFruit_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/CandyHearts_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_CandyHearts_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/LilyoftheValley_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_LilyoftheValley_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kiwi_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kiwi_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'marblepocky'){
+							basePrice1 = 15.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i>(A stick of pocky with a marble coating of two flavors.)</i><br/>";
+							customtypeStyle += "<i>Not quite fancy, but </i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackBitterMarble_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackBitterMarble_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'decorerpocky'){
+							basePrice1 = 20.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i>(A stick of pocky covered in thick cream with more cream drizzled on it. Similar in appearance to desset.)</i><br/>";
+							customtypeStyle += "<i>Decorer pocky usually have more of a fancy or complicated design. Not necessarilly as much frills or lace as dessert might have.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DGrapeMildChocola_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DGrapeMildChocola_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerMint_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerMint_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerBerry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerBerry_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'dessertpocky'){
+							basePrice1 = 20.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i>(A stick of pocky covered in thick frosting with more cream drizzled on it. Similar in appearance to decorer.)</i><br/>";
+							customtypeStyle += "<i>Dessert pocky tend to have fancier designs. Frills, lace, etc.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DShiroiMontBlanc_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DShiroiMontBlanc_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/WhiteWeddingChoco_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_WhiteWeddingChoco_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb__Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'giantpocky'){
+							basePrice1 = 15.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i>(A giant piece of pocky.)</i><br/>";
+							customtypeStyle += "<i>Giant pocky may not be that bigger as children but might have a more masculine design, and are more likely to be more masculine/muscular looking in bishie stage.</i><br/>";
+							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/GBlueCider_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_GBlueCider_Pocky.png"></a></p>'; 
+							
+						} else if (pockytype == 'reversepocky'){
+							basePrice1 = 17.5;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i>(A stick of pocky that has cream on the inside instead of the outside.)</i><br/>";
+							customtypeStyle += "<i>Reverse pocky designs will probably be more neutral in color with accent colors(based on the flavor) peaking out from underneath.</i><br/>";
+							pockytypeStyle += '-Yet to be made-'; 
+							
+						}
+						
+						customdescStyle += "<i>(Buying a basic custom will let you reserve a flavor, but will leave how the pocky boy looks up to me.)</i><br/>";
+                       
+                    } else if (customtype == 'semicustom') {
+						if (pockytype == 'plainpocky'){
+							basePrice1 = 30.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to my interpretation based on how you RP him, and how you fill out the growth form. (Cosplays fall under Complete Custom))</i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $35<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $40<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $30 <br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+					
+							}
+							
+						} else if (pockytype == 'moussepocky'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'crushpocky'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'tsubutsubupocky'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'marblepocky'){
+							basePrice1 = 40.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'decorerpocky'){
+							basePrice1 = 50.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += '<object width="450" height="634"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=122962051&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="634" flashvars="id=122962051&width=1337" allowscriptaccess="always"></embed></object><br><a href="http://mystaira.deviantart.com/art/TGPS-Yul-Child-122962051">TGPS - Yul - Child</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							
+						} else if (pockytype == 'dessertpocky'){
+							basePrice1 = 50.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'giantpocky'){
+							basePrice1 = 40.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'reversepocky'){
+							basePrice1 = 45.0;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						}
+						
+						customdescStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to artist interpretation based on how you RP him, and how you fill out the growth form (mostly how you fill out the growth form). (Cosplays fall under Complete Custom))</i><br/>";
+						
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<br/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<br/></div>';
+			
+                       
+                    } else if (customtype == 'completecustom') {
+						if (pockytype == 'plainpocky'){
+							basePrice1 = 60.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i></i>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $65<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $70<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $60 <br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+					
+							}
+							
+						} else if (pockytype == 'moussepocky'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'crushpocky'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'tsubutsubupocky'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'marblepocky'){
+							basePrice1 = 75.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'decorerpocky'){
+							basePrice1 = 90.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'dessertpocky'){
+							basePrice1 = 90.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i>(This is an example of this pocky type with both Child and Bishie stages. Full customs may customize both stages as much or as little as they like.)</i><br/>";
+							customtypeStyle += '<object width="450" height="682"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=119511318&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="682" flashvars="id=119511318&width=1337" allowscriptaccess="always"></embed></object><object width="450" height="619"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=260406113&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="619" flashvars="id=260406113&width=1337" allowscriptaccess="always"></embed></object><br>(Non-Custom) <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Child-119511318">White Wedding Chocolate Pocky Child "Ai"</a> & <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Bishie-260406113">White Wedding Chocolate Pocky Bishie "Ai"</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							
+						} else if (pockytype == 'giantpocky'){
+							basePrice1 = 75.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (pockytype == 'reversepocky'){
+							basePrice1 = 82.5;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						}
+						
+						customdescStyle += "<i>(Buying a complete custom let`s you decide what you want both the pocky boy to look like and what you want his bishie stage to look like. Deciding how the bishie stage looks happens after you`ve completed growth requirements (which involves RP which might give you ideas for how you want your bishie stage to look).)</i><br/>";
+                       
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ Bishie stage details are not required until growth is requested, at which point you will be provided a seperate form.<p style="margin-bottom:-10"><p/></div>';
+					   
+                    }   
+					
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may choose what flavor, you may even make up a flavor.<p style="margin-bottom:-10"><p/></div>';         
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may even have the pocky boy be a cosplay, however depending on how complex the character is you`ll need to pay extra to get it. Addon- For pocky boys you want to be themed after and special features of a certain character even if you don`t want them to be a cosplay of that character (ex. cheshire cat themed with cheshire cat ears and tail) still fall under complete custom.)<br/></div>'; 					        
+
+                    finalPrice1 = basePrice1;
+        
+                    if (exemptedfrom == 'activityexemption'){
+                        
+                        finalPrice1 += +5;
+                        
+                        exemptedfromStyle += "Activity<br/>";
+                        exemptedfromStyle += 'This exempts your pocky boy from the activity requirement. You will still need to fullfil the playdate growth requirements, but you won`t have to worry about activity.';
+                        
+                    } else if (exemptedfrom == 'fullexemption'){
+                        
+                        finalPrice1 += +10;
+                        
+                        exemptedfromStyle += "Activity and Playdates<br/>";
+                        exemptedfromStyle += 'This will allow you to put in a growth request at anytime of your choosing, regardless of your activity or playdate status.';
+                        
+                    } else if (exemptedfrom == 'noexemption'){
+                        
+                        exemptedfromStyle += "No Exemption<br/>";
+                        exemptedfromStyle += 'You will be required to fulfill the activity and playdate growth requirements for your pocky boy to grow.';
+                        
+                    }     
+          
+
+                    /*
+                    alert('basePrice1: ' + basePrice1);
+                    alert('finalPrice1: ' + finalPrice1);
+                    */
+        
+                    // show result
+                    var result = "";
+        
+                        result = "The cost is: <b>" + 
+                            finalPrice1.toFixed(2) + 
+                            " USD</b>, or  <b>" + 
+                            (finalPrice1 * usdeur).toFixed(2) + 
+                            " Euros</b>.";
+
+        
+                    document.getElementById("resultsDiv").innerHTML = result;
+                    document.getElementById("resultsDiv").style.display = "";
+                    
+                    document.getElementById("stylingDiv").style.display = "";
+                    
+                    document.getElementById("customtypeStyleDiv").innerHTML = customtypeStyle;
+                    document.getElementById("customtypeStyleDiv").style.display = "";
+					
+					document.getElementById("customdescStyleDiv").innerHTML = customdescStyle;
+                    document.getElementById("customdescStyleDiv").style.display = "";
+                    
+                    document.getElementById("pockytypeStyleDiv").innerHTML = pockytypeStyle;
+                    document.getElementById("pockytypeStyleDiv").style.display = "";
+					
+					document.getElementById("commissionformStyleDiv").innerHTML = commissionformStyle;
+                    document.getElementById("commissionformStyleDiv").style.display = "";
+                    
+                    if (exemptedfrom != 'noexemption2'){
+                        document.getElementById("exemptedfromStyleDiv").innerHTML = exemptedfromStyle;
+                        document.getElementById("exemptedfromStyleDiv").style.display = "";
+                    }
+        
+		        } else if (thisisfor == 'newcuplingcustom') { 
+        
+                    var basePrice1 = 0.0;
+                    var finalPrice1 = 0.0;
+        
+		            if (customtype == 'basiccustom') {
+						if (cuplingtype == 'plaincupling'){
+							basePrice1 = 10.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i>(A simple smooth coated stick of cupling.)</i><br/>";
+							customtypeStyle += "<i>Plain cupling designs are more on the simple end of things. They may be more or less plain depending on the flavor itself, but I will probably lean towards simple designs.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SandSouffle_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SandSouffle_Pocky.png"></a></p>'; 
+
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $15<br/><b>Contact Information:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $20<br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Total Price:</b> $10 <br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/></div></td></tr></table>';
+					
+							}
+							
+						} else if (cuplingtype == 'moussecupling'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i>(A stick of cupling with a smooth frosting-like coating.)</i><br/>";
+							customtypeStyle += "<i></i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/HWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_HWhite_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MGreenTea_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MGreenTea_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MWhite_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'crushcupling'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i>(A stick of cupling covered with crushed pieces of the flavor. Usually a nut flavor, but not always.)</i><br/>";
+							customtypeStyle += "<i>Crush cupling tend to be designed based on them being tough or fighters. They probably won't be that fancy looking, but it all depends on the actual flavor.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ShadowCatmintC_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ShadowCatmintC_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'tsubutsubucupling'){
+							basePrice1 = 12.5;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i>(A stick of cupling covered with dried pieces of the flavor. Usually a fruit flavor, but not always.)</i><br/>";
+							customtypeStyle += "<i>TsubuTsubu cupling designs usually have pieces of their flavor strewn about the design.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DragonFruit_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DragonFruit_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/CandyHearts_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_CandyHearts_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/LilyoftheValley_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_LilyoftheValley_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kiwi_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kiwi_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'marblecupling'){
+							basePrice1 = 15.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i>(A stick of cupling with a marble coating of two flavors.)</i><br/>";
+							customtypeStyle += "<i>Not quite fancy, but </i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackBitterMarble_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackBitterMarble_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'decorercupling'){
+							basePrice1 = 20.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i>(A stick of cupling covered in thick cream with more cream drizzled on it. Similar in appearance to desset.)</i><br/>";
+							customtypeStyle += "<i>Decorer cupling usually have more of a fancy or complicated design. Not necessarilly as much frills or lace as dessert might have.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DGrapeMildChocola_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DGrapeMildChocola_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerMint_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerMint_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerBerry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerBerry_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'dessertcupling'){
+							basePrice1 = 20.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i>(A stick of cupling covered in thick frosting with more cream drizzled on it. Similar in appearance to decorer.)</i><br/>";
+							customtypeStyle += "<i>Dessert cupling tend to have fancier designs. Frills, lace, etc.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DShiroiMontBlanc_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DShiroiMontBlanc_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/WhiteWeddingChoco_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_WhiteWeddingChoco_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb__Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'giantcupling'){
+							basePrice1 = 15.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i>(A giant piece of cupling.)</i><br/>";
+							customtypeStyle += "<i>Giant cupling may not be that bigger as children but might have a more masculine design, and are more likely to be more masculine/muscular looking in bishie stage.</i><br/>";
+							cuplingtypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/GBlueCider_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_GBlueCider_Pocky.png"></a></p>'; 
+							
+						} else if (cuplingtype == 'reversecupling'){
+							basePrice1 = 17.5;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i>(A stick of cupling that has cream on the inside instead of the outside.)</i><br/>";
+							customtypeStyle += "<i>Reverse cupling designs will probably be more neutral in color with accent colors(based on the flavor) peaking out from underneath.</i><br/>";
+							cuplingtypeStyle += '-Yet to be made-'; 
+							
+						}
+						
+						customdescStyle += "<i>(Buying a basic custom will let you reserve a flavor, but will leave how the cupling boy looks up to me.)</i><br/>";
+                       
+                    } else if (customtype == 'semicustom') {
+						if (cuplingtype == 'plaincupling'){
+							basePrice1 = 30.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to my interpretation based on how you RP him, and how you fill out the growth form. (Cosplays fall under Complete Custom))</i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $35<br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $40<br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Total Price:</b> $30 <br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+					
+							}
+							
+						} else if (cuplingtype == 'moussecupling'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'crushcupling'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'tsubutsubucupling'){
+							basePrice1 = 35.0;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'marblecupling'){
+							basePrice1 = 40.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'decorercupling'){
+							basePrice1 = 50.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += '<object width="450" height="634"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=122962051&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="634" flashvars="id=122962051&width=1337" allowscriptaccess="always"></embed></object><br><a href="http://mystaira.deviantart.com/art/TGPS-Yul-Child-122962051">TGPS - Yul - Child</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							
+						} else if (cuplingtype == 'dessertcupling'){
+							basePrice1 = 50.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'giantcupling'){
+							basePrice1 = 40.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'reversecupling'){
+							basePrice1 = 45.0;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						}
+						
+						customdescStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to artist interpretation based on how you RP him, and how you fill out the growth form (mostly how you fill out the growth form). (Cosplays fall under Complete Custom))</i><br/>";
+						
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<br/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his cupling stage will match suitably. (In other words, please don`t ask for lemon cupling and then request everything be purple.)<br/></div>';
+			
+                       
+                    } else if (customtype == 'completecustom') {
+						if (cuplingtype == 'plaincupling'){
+							basePrice1 = 60.0;
+							
+							customtypeStyle += "Plain<br/>";
+							customtypeStyle += "<i></i>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+							if (exemptedfrom == 'activityexemption'){
+
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $65<br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+   
+							} else if (exemptedfrom == 'fullexemption'){
+     
+	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $70<br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+
+							} else if (exemptedfrom == 'noexemption'){
+					
+							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>cupling Type: </b>Plain <br/><b>cupling Flavor: </b> <br/><b>Total Price:</b> $60 <br/><b>Contact Information:</b> <p/><b>cupling Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>cupling Type:</b> ( what type of cupling you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>cupling Flavor:</b> ( what flavor of cupling you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>cupling Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the cupling boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the cupling boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+					
+							}
+							
+						} else if (cuplingtype == 'moussecupling'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "Mousse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'crushcupling'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "Crush<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'tsubutsubucupling'){
+							basePrice1 = 67.5;
+							
+							customtypeStyle += "TsubuTsubu<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'marblecupling'){
+							basePrice1 = 75.0;
+							
+							customtypeStyle += "Marble<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'decorercupling'){
+							basePrice1 = 90.0;
+							
+							customtypeStyle += "Decorer<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'dessertcupling'){
+							basePrice1 = 90.0;
+							
+							customtypeStyle += "Dessert<br/>";
+							customtypeStyle += "<i>(This is an example of this cupling type with both Child and Bishie stages. Full customs may customize both stages as much or as little as they like.)</i><br/>";
+							customtypeStyle += '<object width="450" height="682"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=119511318&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="682" flashvars="id=119511318&width=1337" allowscriptaccess="always"></embed></object><object width="450" height="619"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=260406113&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="619" flashvars="id=260406113&width=1337" allowscriptaccess="always"></embed></object><br>(Non-Custom) <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Child-119511318">White Wedding Chocolate cupling Child "Ai"</a> & <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Bishie-260406113">White Wedding Chocolate cupling Bishie "Ai"</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							
+						} else if (cuplingtype == 'giantcupling'){
+							basePrice1 = 75.0;
+							
+							customtypeStyle += "Giant<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						} else if (cuplingtype == 'reversecupling'){
+							basePrice1 = 82.5;
+							
+							customtypeStyle += "Reverse<br/>";
+							customtypeStyle += "<i></i><br/>";
+							customtypeStyle += 'NEED EXAMPLE'; 
+							
+						}
+						
+						customdescStyle += "<i>(Buying a complete custom let`s you decide what you want both the cupling boy to look like and what you want his bishie stage to look like. Deciding how the bishie stage looks happens after you`ve completed growth requirements (which involves RP which might give you ideas for how you want your bishie stage to look).)</i><br/>";
+                       
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his cupling stage will match suitably. (In other words, please don`t ask for lemon cupling and then request everything be purple.)<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ Bishie stage details are not required until growth is requested, at which point you will be provided a seperate form.<p style="margin-bottom:-10"><p/></div>';
+					   
+                    }   
+					
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may choose what flavor, you may even make up a flavor.<p style="margin-bottom:-10"><p/></div>';         
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may even have the cupling boy be a cosplay, however depending on how complex the character is you`ll need to pay extra to get it. Addon- For cupling boys you want to be themed after and special features of a certain character even if you don`t want them to be a cosplay of that character (ex. cheshire cat themed with cheshire cat ears and tail) still fall under complete custom.)<br/></div>'; 					        
+
+                    finalPrice1 = basePrice1;
+        
+                    if (exemptedfrom == 'activityexemption'){
+                        
+                        finalPrice1 += +5;
+                        
+                        exemptedfromStyle += "Activity<br/>";
+                        exemptedfromStyle += 'This exempts your cupling boy from the activity requirement. You will still need to fullfil the playdate growth requirements, but you won`t have to worry about activity.';
+                        
+                    } else if (exemptedfrom == 'fullexemption'){
+                        
+                        finalPrice1 += +10;
+                        
+                        exemptedfromStyle += "Activity and Playdates<br/>";
+                        exemptedfromStyle += 'This will allow you to put in a growth request at anytime of your choosing, regardless of your activity or playdate status.';
+                        
+                    } else if (exemptedfrom == 'noexemption'){
+                        
+                        exemptedfromStyle += "No Exemption<br/>";
+                        exemptedfromStyle += 'You will be required to fulfill the activity and playdate growth requirements for your cupling boy to grow.';
+                        
+                    }     
+          
+
+                    /*
+                    alert('basePrice1: ' + basePrice1);
+                    alert('finalPrice1: ' + finalPrice1);
+                    */
+        
+                    // show result
+                    var result = "";
+        
+                        result = "The cost is: <b>" + 
+                            finalPrice1.toFixed(2) + 
+                            " USD</b>, or  <b>" + 
+                            (finalPrice1 * usdeur).toFixed(2) + 
+                            " Euros</b>.";
+
+        
+                    document.getElementById("resultsDiv").innerHTML = result;
+                    document.getElementById("resultsDiv").style.display = "";
+                    
+                    document.getElementById("stylingDiv").style.display = "";
+                    
+                    document.getElementById("customtypeStyleDiv").innerHTML = customtypeStyle;
+                    document.getElementById("customtypeStyleDiv").style.display = "";
+					
+					document.getElementById("customdescStyleDiv").innerHTML = customdescStyle;
+                    document.getElementById("customdescStyleDiv").style.display = "";
+                    
+                    document.getElementById("cuplingtypeStyleDiv").innerHTML = cuplingtypeStyle;
+                    document.getElementById("cuplingtypeStyleDiv").style.display = "";
+					
+					document.getElementById("commissionformStyleDiv").innerHTML = commissionformStyle;
+                    document.getElementById("commissionformStyleDiv").style.display = "";
+                    
+                    if (exemptedfrom != 'noexemption2'){
+                        document.getElementById("exemptedfromStyleDiv").innerHTML = exemptedfromStyle;
+                        document.getElementById("exemptedfromStyleDiv").style.display = "";
+                    }
+        
+		        } else if (thisisfor == 'existingpocky') { 
+        
+                    var basePrice2 = 0.0;
+                    var finalPrice2 = 0.0;
+        
+                    finalPrice2 = basePrice2;
+             
+                    if (exemptedfrom == 'activityexemption'){
+                        
+                        finalPrice2 += basePrice2+5;
+                        
+                        exemptedfromStyle += "Activity<br/>";
+                        exemptedfromStyle += 'This exempts your pocky boy from the activity requirement. You will still need to fullfil the playdate growth requirements, but you won`t have to worry about activity.';
+
+						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Pocky Boy`s Name:</b> <br/><b>Your Pocky Boy`s Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $5</div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Your Pocky Boy`s Name:</b> ( the name of your pocky boy. ) <br/><b>Your Pocky`s Flavor:</b> ( what flavor your pocky boy is. )<br/><b>Exemption:</b> ( exemption you want. )<br/><b>Total Price:</b> ( total price of the exemption. )</div></td></tr></table>';
+                        
+                    } else if (exemptedfrom == 'fullexemption'){
+                        
+                        finalPrice2 += basePrice2+10;
+                        
+                        exemptedfromStyle += "Activity and Playdates<br/>";
+                        exemptedfromStyle += 'This will allow you to put in a growth request at anytime of your choosing, regardless of your activity or playdate status.';
+                        
+						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Pocky Boy`s Name:</b> <br/><b>Your Pocky Boy`s Flavor: </b> <br/><b>Exemption: </b>Activity & Growth Requirements <br/><b>Total Price:</b> $10</div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Your Pocky Boy`s Name:</b> ( the name of your pocky boy. ) <br/><b>Your Pocky`s Flavor:</b> ( what flavor your pocky boy is. )<br/><b>Exemption:</b> ( exemption you want. )<br/><b>Total Price:</b> ( total price of the exemption. )</div></td></tr></table>';
+                    } else if (exemptedfrom == 'noexemption'){
+                        
+                        exemptedfromStyle += "No Exemption<br/>";
+                        exemptedfromStyle += 'You will be required to fulfill the activity and playdate growth requirements for your pocky boy to grow.';
+                        
+						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Pocky Boy`s Name:</b> <br/><b>Your Pocky Boy`s Flavor: </b> <br/><b>Exemption: </b>None <br/><b>Total Price:</b> $0</div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Your Pocky Boy`s Name:</b> ( the name of your pocky boy. ) <br/><b>Your Pocky`s Flavor:</b> ( what flavor your pocky boy is. )<br/><b>Exemption:</b> ( exemption you want. )<br/><b>Total Price:</b> ( total price of the exemption. )</div></td></tr></table>';
+                    }
+        
+                    /*
+                    alert('basePrice2: ' + basePrice2);
+                    alert('finalPrice2: ' + finalPrice2);
+                     */
+        
+                    // show result
+                    var result = "";
+        
+
+						result = "The coloring cost is: <b>" + 
+							finalPrice2.toFixed(2) + 
+							" USD</b>, or <b>" + 
+							(finalPrice2 * usdeur).toFixed(2) + 
+							" Euros</b>.";
+
+        
+                    document.getElementById("resultsDiv").innerHTML = result;
+                    document.getElementById("resultsDiv").style.display = "";
+                    
+                    document.getElementById("stylingDiv").style.display = "";
+                    
+                    document.getElementById("customtypeStyleDiv").innerHTML = customtypeStyle;
+                    document.getElementById("customtypeStyleDiv").style.display = "none";
+					
+					document.getElementById("customdescStyleDiv").innerHTML = customdescStyle;
+                    document.getElementById("customdescStyleDiv").style.display = "none";
+					
+					document.getElementById("commissionformStyleDiv").innerHTML = commissionformStyle;
+                    document.getElementById("commissionformStyleDiv").style.display = "";
+                    
+                    if (exemptedfrom != 'noexemption2'){
+                        document.getElementById("exemptedfromStyleDiv").innerHTML = exemptedfromStyle;
+                        document.getElementById("exemptedfromStyleDiv").style.display = "";
+                    }
+        
+                }
+                
+                var isAfterFirstCalculation = document.getElementById("isAfterFirstCalculation").value;
+                if (isAfterFirstCalculation === 0){
+                    document.getElementById("isAfterFirstCalculation").value = "1";
+                }
+                
+            }
+            
+            function dynamicCalculate(){
+                var isAfterFirstCalculation = document.getElementById("isAfterFirstCalculation").value;
+                if (isAfterFirstCalculation == 1){
+                    calculate();
+                }
+            }
+            
+            function onChangeType(){
+             
+                var thisisfor = document.getElementById("thisisfor").value;
+                
+                if (thisisfor == 'newcustom'){
+                    document.getElementById("pockytypeTr").style.display = "";
+                    document.getElementById("cuplingtypeTr").style.display = "none";
+                    document.getElementById("customtypeTr").style.display = "";
+                    dynamicCalculate();
+                } else if (thisisfor == 'newcuplingcustom'){
+                    document.getElementById("cuplingtypeTr").style.display = "none";
+                    document.getElementById("pockytypeTr").style.display = "none";
+                    document.getElementById("cuplingtypeTr").style.display = "";
+                    document.getElementById("customtypeTr").style.display = "";
+                    dynamicCalculate();
+                } else if (thisisfor == 'existingpocky'){
+                    document.getElementById("customtypeTr").style.display = "none";
+                    document.getElementById("pockytypeTr").style.display = "none";
+                    document.getElementById("cuplingtypeTr").style.display = "none";
+                    dynamicCalculate();
+                }
+                
+            }
+
+            function reset(){
+        
+                // reload page
+                window.location.href=window.location.href;
+        
+            }
+            
+            // on reload
+            function onReload(){
+                onChangeType();
+            }
+
+        </script>		
+		
+    </head> 
+
+    <body onLoad="onReload()">
+    
+	<center>
+		<div style="background-image:url(http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/background-bottom_test001.png~original) ;background-repeat:no-repeat;background-position:center bottom;padding:0px 0px 0px 0px;">
+		<div style="background-image:url(http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/background-top_test001-1.png~original) ;background-repeat:no-repeat;background-position:center 100px;">
+        <h2><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/rlcbanner_test002.png"></h2>
+
+		
+		<table>
+            <tbody>
+                <tr>
+					<td>
+        <table>
+            <tbody>
+                <tr id="thisisforTr">
+                    <td width="160px">
+                        <label>For:</label>
+                    </td>
+                    <td>
+                        <select id="thisisfor" name="thisisfor" onChange="onChangeType()">
+                            <option selected="selected" value="newcustom">New Custom Pocky Boy</option>
+                            <option value="existingpocky">Existing Pocky Boy</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="customtypeTr">
+                    <td width="100px">
+                        <label>Custom Type:</label>
+                    </td>
+                    <td>
+                        <select id="customtype" name="customtype" onChange="dynamicCalculate()">
+                            <option selected="selected" value="basiccustom">Basic Custom</option>
+							<option value="semicustom">Semi-Custom</option>
+                            <option value="completecustom">Complete Custom</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="pockytypeTr">
+                    <td width="100px">
+                        <label>Pocky Type:</label>
+                    </td>
+                    <td>
+                        <select id="pockytype" name="pockytype" onChange="dynamicCalculate()">
+                            <option selected="selected" value="plainpocky">Plain</option>
+                            <option value="moussepocky">Mousse</option>
+                            <option value="crushpocky">Crush</option>
+                            <option value="tsubutsubupocky">TsubuTsubu</option>
+                            <option value="marblepocky">Marble</option>
+                            <option value="decorerpocky">Decorer</option>
+                            <option value="dessertpocky">Dessert</option>
+                            <option value="giantpocky">Giant</option>
+                            <option value="reversepocky">Reverse</option>
+                            <option value="midipocky">Midi</option>
+                        </select>
+                    </td>
+                </tr>
+				<tr id="cuplingtypeTr">
+                    <td width="100px">
+                        <label>Cupling Type:</label>
+                    </td>
+                    <td>
+                        <select id="cuplingtype" name="cuplingtype" onChange="dynamicCalculate()">
+                            <option selected="selected" value="plaincupling">Plain Glass</option>
+                            <option value="decorercupling">Paper Cup</option>
+                            <option value="tsubutsubucupling">Mug</option>
+                            <option value="crushcupling">Coffee Cup</option>
+                            <option value="moussecupling">Tea Cup</option>
+                            <option value="reversecupling">Shot Glass</option>
+                            <option value="reversecupling">Tankard</option>
+                            <option value="dessertcupling">Sake Cup</option>
+                            <option value="marblecupling">Wine Glass</option>
+                            <option value="giantcupling">Chalice/Goblet</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="exemptedfromTr">
+                    <td width="100px">
+                        <label>Exempted From:</label>
+                    </td>
+                    <td>
+                        <select id="exemptedfrom" name="exemptedfrom" onChange="dynamicCalculate()">
+                            <option selected="selected" value="noexemption">None</option>
+                            <option value="activityexemption">Activity</option>
+                            <option value="fullexemption">Activity & Growth Requirements</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px">&nbsp;</td>
+                    <td>
+                        <input value="calculate" onclick="calculate()" type="button">
+                        <input value="reset" onclick="reset()" type="button">
+                        <input value="0" type="hidden" id="isAfterFirstCalculation">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+		            </td>
+					<td>
+					<div style="height:140px;width:600px;border:1px solid #ccc;font:0.75em/1.5em Georgia, Garamond, Serif;color:#BC8F8F;overflow:auto;">
+						<p style="padding: 10px 5px 10px 5px;margin-top:-28;"><center><font color=red><b><font size=2.0em>«</font> IMPORTANT - PLEASE READ FROM BEGINNING TO END <font size=2.0em>»</font></b></font></center>
+						<center style="line-height:150%"><b><font size=2.0em>«</font>Process of Getting RL Custom:<font size=2.0em>»</font></b></center>
+						<ul style="margin-top: 5px">
+						<li style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o1_test002.png');margin-right: 10px">First you must have an approved quest thread in the guild. Alternatively, if you wish to details to remain secret from others, you may PM the mule, <a href="http://www.gaiaonline.com/profile/privmsg.php?mode=post&u=12591593">The Gourmet Pocky Shoppe</a>, or <a href="http://mystaira.deviantart.com/">Mystaira</a> on devART, with your quest details and have that approved.<br/></li>
+						<li style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o2_test002.png');margin-right: 10px">Once RL custom slots are open and you have applied for a slot (via Gaia or DA), if chosen I will reply letting you know and provide you with my Paypal email.<br/></li>
+						<li style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o3_test002.png');margin-right: 10px">You send the payment via Paypal to my Paypal email. <ul style="margin-left:-25"><dt>• Please attach a note with your Gaia username (and DA name if applying through DA) and also the flavor with the payment so I know who sent it. </dt><dt>• For ease, choose "Other" under "Personal" payments.</dt></ul></li>
+						<li style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o4_test002.png');margin-right: 10px">Once payment is received, I will create the pocky stage and post the cert in the thread.<br/></li>
+						</ul>
+						<center style="line-height:250%"><b><font size=2.0em>«</font>Rules & Info for RL Customs:<font size=2.0em>»</font></b></center>
+						<ul style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o_test002.png');margin-top: 0px;margin-right: 10px">
+						<li>Send the form to the mule, <a href="http://www.gaiaonline.com/profile/privmsg.php?mode=post&u=12591593">The Gourmet Pocky Shoppe</a>, on Gaia or to <a href="http://mystaira.deviantart.com/">Mystaira</a> on devART.</li>
+						<li>If the pocky is a gift for someone, please provide their username as well.</li>
+						<li>Just a caution, but the pocky boy stage may take an indeterminate amount of time to be done due to inspiration and other workloads.</li>
+						<li>All child and bishie stages are fullbody.</li>
+						</ul>
+						<center style="line-height:250%"><b><font size=2.0em>«</font> Terms of Use for RL Customs <font size=2.0em>»</font></b></center>
+						<ul style="list-style-image:url('http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/bullet_o_test002.png');margin-top: 0px;margin-right: 10px">
+						<li>You may use the commissioned Pocky artwork for personal use only.<br/></li>
+						<li>You may NOT resell or use the commissioned artwork for commercial purposes without discussing it with me first.<br/></li>
+						<li>You may NOT claim the artwork as your own and will issue credit as necessary. And please do not remove signature without asking.<br/></li>
+						<li>As the artist, I have the right to display the artwork on DA or other sites.<br/></li>
+						</ul></p>
+					</div>
+					</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div id="resultsDiv" style="display:none;color:#BC8F8F;font-size:1.5em;">&nbsp;</div>
+        <br>
+        <div id="stylingDiv" style="display:none">
+            <table border="1" bordercolor="#BC8F8F" width="1014px">
+                <tbody style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                    <tr style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                        <td colspan="2" style="text-align:center;color:#BC8F8F;font-weight:bold;border:1px solid#BC8F8F;">
+                            Details: <i>(Form underneath)</i></br>
+							<div id="customdescStyleDiv" style="display:hidden;text-align:center;color:#BC8F8F;font-size:1.0em">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                        <td width="50%" style="border:1px solid#BC8F8F;">
+                            <div id="exemptedfromStyleDiv" style="display:hidden;text-align:center;color:#BC8F8F;font-size:1.0em;">&nbsp;</div>
+                        </td>
+                    </tr>
+                    <tr style="background-color:#fff;border:1px solid#BC8F8F;">
+                        <td width="50%" style="border:1px solid#BC8F8F;">
+                            <div id="customtypeStyleDiv" style="display:hidden;text-align:center;color:#BC8F8F;font-size:1.0em">&nbsp;</div>
+                            <div id="pockytypeStyleDiv" style="display:hidden;text-align:center;color:#BC8F8F;font-size:1.0em">&nbsp;</div>
+                        </td>
+                    </tr>
+					</tr>
+                    <tr style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                        <td colspan="2" style="border:1px solid#BC8F8F;">
+                            <div id="commissionformStyleDiv" style="display:hidden;text-align:center;color:#BC8F8F;font-size:1.0em;padding-left:2em;padding-right:2em;">&nbsp;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+		    <table border="1" bordercolor="#BC8F8F" width="1014px">
+                <tbody style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                    <tr style="background-color:#fffaf7;border:1px solid#BC8F8F;">
+                        <td colspan="2" style="text-align:center;color:#BC8F8F;font-weight:bold;border:1px solid#BC8F8F;">
+                            Previous RLCustoms: (Newest to Oldest)</br>
+							<i>(Click thumbnail for full view)</i>
+                        </td>
+                    </tr>
+                    <tr style="background-color:#fff;">
+                        <td style="border:1px solid#BC8F8F;">
+						<div style="display:hidden;height:500px;width:1000px;text-align:center;color:#BC8F8F;font-size:1.0em;overflow:auto;">
+							<table width="900" align="center">
+								<tr align="center" style="border:1px solid#BC8F8F;">
+									<td align="left" valign="top">
+										<div style="display:hidden;text-align:left;color:#BC8F8F;font-size:1.0em;">
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SandSouffle_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SandSouffle_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SandSouffle_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SandSouffle_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/CandyHearts_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_CandyHearts_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/CandyHearts_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_CandyHearts_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/LilyoftheValley_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_LilyoftheValley_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/LilyoftheValley_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_LilyoftheValley_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/EarlGreyTea_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_EarlGreyTea_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/EarlGreyTea_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_EarlGreyTea_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ShadowCatmintC_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ShadowCatmintC_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ShadowCatmintC_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ShadowCatmintC_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Tiramisu_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Tiramisu_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Tiramisu_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Tiramisu_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackVelvetRaspberry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackVelvetRaspberry_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackVelvetRaspberry_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackVelvetRaspberry_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RainbowSherbet_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RainbowSherbet_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RainbowSherbet_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RainbowSherbet_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackCherry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackCherry_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackCherry_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackCherry_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ChocoBanana_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ChocoBanana_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ChocoBanana_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ChocoBanana_Child.png" align="left"></a><font style="line-height:73px"> - Complete Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackBitterMarble_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackBitterMarble_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackBitterMarble_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackBitterMarble_Child.png" align="left"></a><font style="line-height:73px"> - Semi- Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackForestGateau_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackForestGateau_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackForestGateau_ChildN.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackForestGateau_ChildN.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackForestGateau_ChildK.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackForestGateau_ChildK.png" align="left"></a><font style="line-height:73px"> - Semi Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Child.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Bishie.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Bishie.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Child.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Bishie.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Bishie.png" align="left"></a><font style="line-height:73px"> - Complete Custom</font><p>
+										</div>
+									</td>
+										<td align="right" valign="top">
+										<div style="display:hidden;text-align:left;color:#BC8F8F;font-size:1.0em;">
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kiwi_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kiwi_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kiwi_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kiwi_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DGrapeMildChocola_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DGrapeMildChocola_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DGrapeMildChocola_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DGrapeMildChocola_Child.png" align="left"></a><font style="line-height:73px"> - Semi-Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/KobeRoseWine_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_KobeRoseWine_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/KobeRoseWine_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_KobeRoseWine_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/GBlueCider_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_GBlueCider_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/GBlueCider_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_GBlueCider_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AzukiBeans_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AzukiBeans_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AzukiBeans_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AzukiBeans_Child.png" align="left"></a><font style="line-height:73px"> - Complete Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerBerry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerBerry_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerBerry_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerBerry_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Honey_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Honey_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Honey_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Honey_Child.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Honey_Bishie.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Honey_Bishie.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SpicyChili_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SpicyChili_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SpicyChili_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SpicyChili_Child.png" align="left"></a><font style="line-height:73px"> - Semi-Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kurogoma_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kurogoma_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kurogoma_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kurogoma_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MensCoffee_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MensCoffee_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MensCoffee_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MensCoffee_Child.png" align="left"></a><font style="line-height:73px"> - Semi-Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MGreenTea_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MGreenTea_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MGreenTea_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MGreenTea_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>										
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MurasakiImo_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MurasakiImo_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MurasakiImo_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MurasakiImo_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font></p>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MWhite_Pocky.png" align="left"></a>
+										<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MWhite_Child.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MWhite_Child.png" align="left"></a><font style="line-height:73px"> - Basic Custom</font>
+										</div>
+									</td>
+								</tr>
+							</table>
+							</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>		
+			<div style="text-align:center;color:#BC8F8F;font-weight:bold;padding: 35px 0px 67px 0px;">All artwork © <a href="http://mystaira.deviantart.com/" style="color:#BC8F8F">Mystaira</a></div>
+			</div></div>
+	</center>
+
+
+	</body>
+</html>
