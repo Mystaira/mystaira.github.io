@@ -2,8 +2,6 @@
 
     <head>
     
-	 <title>The Gourmet Pocky Shop RLCustom Calculator</title>
-    
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <style type="text/css">
             
@@ -33,14 +31,12 @@
                 document.getElementById("customtypeStyleDiv").style.display = "none";
                 document.getElementById("customdescStyleDiv").style.display = "none";
                 document.getElementById("pockytypeStyleDiv").style.display = "none";
-                document.getElementById("cuplingtypeStyleDiv").style.display = "none";
                 document.getElementById("exemptedfromStyleDiv").style.display = "none";
                 document.getElementById("commissionformStyleDiv").style.display = "none";
         
                 var thisisfor = document.getElementById("thisisfor").value;
                 var customtype = document.getElementById("customtype").value;
                 var pockytype = document.getElementById("pockytype").value;
-                var cuplingtype = document.getElementById("cuplingtype").value;
                 var exemptedfrom = document.getElementById("exemptedfrom").value;
                 
                 /*
@@ -48,36 +44,22 @@
                 alert('exemptedfrom: ' + exemptedfrom);
                 */
         
-                if (thisisfor == 'newcustom') { 
+                if (thisisfor == 'newcustompocky') { 
         
                     var basePrice1 = 0.0;
                     var finalPrice1 = 0.0;
         
 		            if (customtype == 'basiccustom') {
 						if (pockytype == 'plainpocky'){
-							basePrice1 = 10.0;
+							basePrice1 = 20.0;
 							
 							customtypeStyle += "Plain<br/>";
 							customtypeStyle += "<i>(A simple smooth coated stick of pocky.)</i><br/>";
 							customtypeStyle += "<i>Plain pocky designs are more on the simple end of things. They may be more or less plain depending on the flavor itself, but I will probably lean towards simple designs.</i><br/>";
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/SandSouffle_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_SandSouffle_Pocky.png"></a></p>'; 
-
-							if (exemptedfrom == 'activityexemption'){
-
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $15<br/><b>Contact Information:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
-   
-							} else if (exemptedfrom == 'fullexemption'){
-     
-	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $20<br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
-
-							} else if (exemptedfrom == 'noexemption'){
 					
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Basic <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $10 <br/><b>Contact Information:</b>  </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/></div></td></tr></table>';
-					
-							}
-							
 						} else if (pockytype == 'moussepocky'){
-							basePrice1 = 12.5;
+							basePrice1 = 22.5;
 							
 							customtypeStyle += "Mousse<br/>";
 							customtypeStyle += "<i>(A stick of pocky with a smooth frosting-like coating.)</i><br/>";
@@ -85,7 +67,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MBlueberryYogurt_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MBlueberryYogurt_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/HWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_HWhite_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MGreenTea_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MGreenTea_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/MWhite_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_MWhite_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'crushpocky'){
-							basePrice1 = 12.5;
+							basePrice1 = 22.5;
 							
 							customtypeStyle += "Crush<br/>";
 							customtypeStyle += "<i>(A stick of pocky covered with crushed pieces of the flavor. Usually a nut flavor, but not always.)</i><br/>";
@@ -93,7 +75,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/ShadowCatmintC_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_ShadowCatmintC_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/AlmondCrush_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_AlmondCrush_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'tsubutsubupocky'){
-							basePrice1 = 12.5;
+							basePrice1 = 22.5;
 							
 							customtypeStyle += "TsubuTsubu<br/>";
 							customtypeStyle += "<i>(A stick of pocky covered with dried pieces of the flavor. Usually a fruit flavor, but not always.)</i><br/>";
@@ -101,7 +83,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DragonFruit_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DragonFruit_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/CandyHearts_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_CandyHearts_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/LilyoftheValley_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_LilyoftheValley_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/Kiwi_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_Kiwi_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'marblepocky'){
-							basePrice1 = 15.0;
+							basePrice1 = 25.0;
 							
 							customtypeStyle += "Marble<br/>";
 							customtypeStyle += "<i>(A stick of pocky with a marble coating of two flavors.)</i><br/>";
@@ -109,7 +91,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/BlackBitterMarble_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_BlackBitterMarble_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/RumRaisin_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_RumRaisin_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'decorerpocky'){
-							basePrice1 = 20.0;
+							basePrice1 = 30.0;
 							
 							customtypeStyle += "Decorer<br/>";
 							customtypeStyle += "<i>(A stick of pocky covered in thick cream with more cream drizzled on it. Similar in appearance to desset.)</i><br/>";
@@ -117,7 +99,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DGrapeMildChocola_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DGrapeMildChocola_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerMint_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerMint_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DecorerBerry_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DecorerBerry_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'dessertpocky'){
-							basePrice1 = 20.0;
+							basePrice1 = 30.0;
 							
 							customtypeStyle += "Dessert<br/>";
 							customtypeStyle += "<i>(A stick of pocky covered in thick frosting with more cream drizzled on it. Similar in appearance to decorer.)</i><br/>";
@@ -125,7 +107,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/DShiroiMontBlanc_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_DShiroiMontBlanc_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/WhiteWeddingChoco_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_WhiteWeddingChoco_Pocky.png"></a><a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb__Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'giantpocky'){
-							basePrice1 = 15.0;
+							basePrice1 = 25.0;
 							
 							customtypeStyle += "Giant<br/>";
 							customtypeStyle += "<i>(A giant piece of pocky.)</i><br/>";
@@ -133,7 +115,7 @@
 							pockytypeStyle += '<a href="http://img.photobucket.com/albums/v79/Mystaira/TGPS/GU/GBlueCider_Pocky.png"><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/v2/Thumb_GBlueCider_Pocky.png"></a></p>'; 
 							
 						} else if (pockytype == 'reversepocky'){
-							basePrice1 = 17.5;
+							basePrice1 = 27.5;
 							
 							customtypeStyle += "Reverse<br/>";
 							customtypeStyle += "<i>(A stick of pocky that has cream on the inside instead of the outside.)</i><br/>";
@@ -142,81 +124,66 @@
 							
 						}
 						
-						customdescStyle += "<i>(Buying a basic custom will let you reserve a flavor, but will leave how the pocky boy looks up to me.)</i><br/>";
-                       
+                    					
                     } else if (customtype == 'semicustom') {
 						if (pockytype == 'plainpocky'){
-							basePrice1 = 30.0;
+							basePrice1 = 40.0;
 							
 							customtypeStyle += "Plain<br/>";
 							customtypeStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to my interpretation based on how you RP him, and how you fill out the growth form. (Cosplays fall under Complete Custom))</i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
-							if (exemptedfrom == 'activityexemption'){
-
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $35<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-   
-							} else if (exemptedfrom == 'fullexemption'){
-     
-	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $40<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-
-							} else if (exemptedfrom == 'noexemption'){
-					
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Semi-custom <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $30 <br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-					
-							}
-							
 						} else if (pockytype == 'moussepocky'){
-							basePrice1 = 35.0;
+							basePrice1 = 45.0;
 							
 							customtypeStyle += "Mousse<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'crushpocky'){
-							basePrice1 = 35.0;
+							basePrice1 = 45.0;
 							
 							customtypeStyle += "Crush<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'tsubutsubupocky'){
-							basePrice1 = 35.0;
+							basePrice1 = 45.0;
 							
 							customtypeStyle += "TsubuTsubu<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'marblepocky'){
-							basePrice1 = 40.0;
+							basePrice1 = 50.0;
 							
 							customtypeStyle += "Marble<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'decorerpocky'){
-							basePrice1 = 50.0;
+							basePrice1 = 60.0;
 							
 							customtypeStyle += "Decorer<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += '<object width="450" height="634"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=122962051&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="634" flashvars="id=122962051&width=1337" allowscriptaccess="always"></embed></object><br><a href="http://mystaira.deviantart.com/art/TGPS-Yul-Child-122962051">TGPS - Yul - Child</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
 							
 						} else if (pockytype == 'dessertpocky'){
-							basePrice1 = 50.0;
+							basePrice1 = 60.0;
 							
 							customtypeStyle += "Dessert<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'giantpocky'){
-							basePrice1 = 40.0;
+							basePrice1 = 50.0;
 							
 							customtypeStyle += "Giant<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'reversepocky'){
-							basePrice1 = 45.0;
+							basePrice1 = 55.0;
 							
 							customtypeStyle += "Reverse<br/>";
 							customtypeStyle += "<i></i><br/>";
@@ -226,83 +193,65 @@
 						
 						customdescStyle += "<i>(Semi-customs will let you choose the flavor and what the child stage looks like. The bishie stage will still be up to artist interpretation based on how you RP him, and how you fill out the growth form (mostly how you fill out the growth form). (Cosplays fall under Complete Custom))</i><br/>";
 						
-						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<br/></div>';
-						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<br/></div>';
-			
-                       
                     } else if (customtype == 'completecustom') {
 						if (pockytype == 'plainpocky'){
-							basePrice1 = 60.0;
+							basePrice1 = 70.0;
 							
 							customtypeStyle += "Plain<br/>";
 							customtypeStyle += "<i></i>";
 							customtypeStyle += 'NEED EXAMPLE'; 
-							
-							if (exemptedfrom == 'activityexemption'){
-
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity <br/><b>Total Price:</b> $65<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-   
-							} else if (exemptedfrom == 'fullexemption'){
-     
-	 						commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>Activity & Growth <br/><b>Total Price:</b> $70<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-
-							} else if (exemptedfrom == 'noexemption'){
-					
-							commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> Complete <br/><b>Pocky Type: </b>Plain <br/><b>Pocky Flavor: </b> <br/><b>Total Price:</b> $60 <br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
-					
-							}
-							
+						
 						} else if (pockytype == 'moussepocky'){
-							basePrice1 = 67.5;
+							basePrice1 = 75;
 							
 							customtypeStyle += "Mousse<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'crushpocky'){
-							basePrice1 = 67.5;
+							basePrice1 = 80;
 							
 							customtypeStyle += "Crush<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'tsubutsubupocky'){
-							basePrice1 = 67.5;
+							basePrice1 = 80;
 							
 							customtypeStyle += "TsubuTsubu<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'marblepocky'){
-							basePrice1 = 75.0;
+							basePrice1 = 85.0;
 							
 							customtypeStyle += "Marble<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'decorerpocky'){
-							basePrice1 = 90.0;
+							basePrice1 = 95.0;
 							
 							customtypeStyle += "Decorer<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'dessertpocky'){
-							basePrice1 = 90.0;
+							basePrice1 = 100.0;
 							
 							customtypeStyle += "Dessert<br/>";
 							customtypeStyle += "<i>(This is an example of this pocky type with both Child and Bishie stages. Full customs may customize both stages as much or as little as they like.)</i><br/>";
 							customtypeStyle += '<object width="450" height="682"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=119511318&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="682" flashvars="id=119511318&width=1337" allowscriptaccess="always"></embed></object><object width="450" height="619"><param name="movie" value="http://backend.deviantart.com/embed/view.swf?1"><param name="flashvars" value="id=260406113&width=1337"><param name="allowScriptAccess" value="always"><embed src="http://backend.deviantart.com/embed/view.swf?1" type="application/x-shockwave-flash" width="450" height="619" flashvars="id=260406113&width=1337" allowscriptaccess="always"></embed></object><br>(Non-Custom) <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Child-119511318">White Wedding Chocolate Pocky Child "Ai"</a> & <a href="http://mystaira.deviantart.com/art/TGPS-Ai-Bishie-260406113">White Wedding Chocolate Pocky Bishie "Ai"</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
 							
 						} else if (pockytype == 'giantpocky'){
-							basePrice1 = 75.0;
+							basePrice1 = 85.0;
 							
 							customtypeStyle += "Giant<br/>";
 							customtypeStyle += "<i></i><br/>";
 							customtypeStyle += 'NEED EXAMPLE'; 
 							
 						} else if (pockytype == 'reversepocky'){
-							basePrice1 = 82.5;
+							basePrice1 = 90;
 							
 							customtypeStyle += "Reverse<br/>";
 							customtypeStyle += "<i></i><br/>";
@@ -311,15 +260,8 @@
 						}
 						
 						customdescStyle += "<i>(Buying a complete custom let`s you decide what you want both the pocky boy to look like and what you want his bishie stage to look like. Deciding how the bishie stage looks happens after you`ve completed growth requirements (which involves RP which might give you ideas for how you want your bishie stage to look).)</i><br/>";
-                       
-						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<p style="margin-bottom:-10"><p/></div>';
-						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<p style="margin-bottom:-10"><p/></div>';
-						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ Bishie stage details are not required until growth is requested, at which point you will be provided a seperate form.<p style="margin-bottom:-10"><p/></div>';
 					   
-                    }   
-					
-					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may choose what flavor, you may even make up a flavor.<p style="margin-bottom:-10"><p/></div>';         
-					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may even have the pocky boy be a cosplay, however depending on how complex the character is you`ll need to pay extra to get it. Addon- For pocky boys you want to be themed after and special features of a certain character even if you don`t want them to be a cosplay of that character (ex. cheshire cat themed with cheshire cat ears and tail) still fall under complete custom.)<br/></div>'; 					        
+                    }
 
                     finalPrice1 = basePrice1;
         
@@ -344,6 +286,77 @@
                         
                     }     
           
+					commissionformStyle += '<table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Your Gaia Username:</b> <br/><b>Custom Type:</b> ';
+					if (customtype == 'basiccustom') {
+						commissionformStyle += 'Basic Custom';	
+					} else if (customtype == 'semicustom') {
+						commissionformStyle += 'Basic Custom';	
+					} else if (customtype == 'completecustom') {
+						commissionformStyle += 'Complete Custom';	
+					}
+					commissionformStyle += '<br/><b>Pocky Type: </b>';
+						if (pockytype == 'plainpocky'){
+							commissionformStyle += 'Plain';
+						} else if (pockytype == 'moussepocky'){
+							commissionformStyle += 'Mousse';
+						} else if (pockytype == 'crushpocky'){
+							commissionformStyle += 'Crush';
+						} else if (pockytype == 'tsubutsubupocky'){
+							commissionformStyle += 'TsubuTsubu';
+						} else if (pockytype == 'marblepocky'){
+							commissionformStyle += 'Marble';
+						} else if (pockytype == 'decorerpocky'){
+							commissionformStyle += 'Decorer';
+						} else if (pockytype == 'dessertpocky'){
+							commissionformStyle += 'Dessert';
+						} else if (pockytype == 'giantpocky'){
+							commissionformStyle += 'Giant';
+						} else if (pockytype == 'reversepocky'){
+							commissionformStyle += 'Reverse';
+						} else if (pockytype == 'midipocky'){
+							commissionformStyle += 'Midi';
+						}
+					commissionformStyle += '<br/><b>Pocky Flavor: </b> <br/><b>Exemption: </b>';
+							if (exemptedfrom == 'activityexemption'){
+							commissionformStyle += 'Activity';
+							} else if (exemptedfrom == 'fullexemption'){
+							commissionformStyle += 'Activity & Growth';
+  							} else if (exemptedfrom == 'noexemption'){
+							commissionformStyle += 'None';
+							}
+					commissionformStyle += '<br/><b>Total Price:</b> ';
+					commissionformStyle += "$"+finalPrice1.toFixed(2);	
+					
+				
+					
+					if (customtype == 'basiccustom') {
+						commissionformStyle += '<br/><b>Contact Information:</b> </div></td>';
+						commissionformStyle += '<td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)</div></td></tr></table>';
+						customdescStyle += "<i>(Buying a basic custom will let you reserve a flavor, but will leave how the pocky boy looks up to me.)</i><br/>";
+					} else if (customtype == 'semicustom') {
+						commissionformStyle += '<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td>';
+						commissionformStyle += '<td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<br/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<br/></div>';
+					} else if (customtype == 'completecustom') {
+						commissionformStyle += '<br/><b>Contact Information:</b> <p/><b>Pocky Boy Name:</b> <br/><b>Hair:</b> <br/><b>Eyes:</b> <br/><b>Skin:</b> <br/><b>Personality:</b> <br/><b>Appearance:</b> <br/><b>Clothing:</b> <br/><b>Accessories/Tattoos/Misc:</b> <br/><b>Important Features:</b><br/><b>References:</b> </div></td>';
+						commissionformStyle += '<td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#BC8F8F;font-size:0.8em;padding:0.5em;background-gray:white;overflow:auto;"><b>Your Gaia Username:</b> (Your username on Gaia.)<br/><b>Custom Type:</b> (basic, semi, complete) <br/><b>Pocky Type:</b> ( what type of pocky you want. i.e. plain(there is no added word to the flavor, ex. `Strawberry`), decorer, dessert, mousse, etc.)<br/><b>Pocky Flavor:</b> ( what flavor of pocky you want. )<br/><b>Total Price:</b> ( total price of the custom. )<br/><b>Contact Information:</b> (preferably an email address, as this is how I will be delivering the art and/or updates.)<p/><b>Pocky Boy Name:</b> (This can be left blank. You may decide on the name after seeing his child stage.)<br/><b>Hair:</b> (Hair color and style)<br/><b>Eyes:</b> (Any details about the eyes. Color, etc.)<br/><b>Skin:</b> (Skin color)<br/><b>Personality:</b> (How the pocky boy acts)<br/><b>Appearance:</b> (Anything about the character`s appearance that does not fit anywhere else.)<br/><b>Clothing:</b> (What you would like the pocky boy to wear.)<br/><b>Accessories/Tattoos/Misc:</b> (Any accessories they have, visible tattoos, or anything else to mention)<br/><b>Important Features:</b> (Anything important that you absolutely must have shown a certain way. Weither it be jewelry, hairstyle, anything.)<br/><b>References:</b> (Image refs, anything to show what you want. I personally prefer to have images to work from rather than just descriptions if you have something really specific in mind.)</div></td></tr></table>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may be as specific or unspecific as you want. The less specific the more I base it on the flavor.<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ On that flavor note, I would prefer if you are going to be really specific, if you choose a flavor that would have the same color scheme so that his pocky stage will match suitably. (In other words, please don`t ask for lemon pocky and then request everything be purple.)<p style="margin-bottom:-10"><p/></div>';
+						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ Bishie stage details are not required until growth is requested, at which point you will be provided a seperate form.<p style="margin-bottom:-10"><p/></div>';
+					}
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may choose what flavor, you may even make up a flavor.<p style="margin-bottom:-10"><p/></div>';         
+					commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#BC8F8F;font-size:0.8em;">➤ You may even have the pocky boy be a cosplay, however depending on how complex the character is you`ll need to pay extra to get it. Addon- For pocky boys you want to be themed after and special features of a certain character even if you don`t want them to be a cosplay of that character (ex. cheshire cat themed with cheshire cat ears and tail) still fall under complete custom.)<br/></div>';
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
 
                     /*
                     alert('basePrice1: ' + basePrice1);
@@ -382,7 +395,7 @@
                         document.getElementById("exemptedfromStyleDiv").style.display = "";
                     }
         
-		        } else if (thisisfor == 'newcuplingcustom') { 
+		        } else if (thisisfor == 'newcustomcupling') { 
         
                     var basePrice1 = 0.0;
                     var finalPrice1 = 0.0;
@@ -678,7 +691,11 @@
                         
                     }     
           
-
+					
+		  
+		  
+		  
+		  
                     /*
                     alert('basePrice1: ' + basePrice1);
                     alert('finalPrice1: ' + finalPrice1);
@@ -803,12 +820,12 @@
              
                 var thisisfor = document.getElementById("thisisfor").value;
                 
-                if (thisisfor == 'newcustom'){
+                if (thisisfor == 'newcustompocky'){
                     document.getElementById("pockytypeTr").style.display = "";
                     document.getElementById("cuplingtypeTr").style.display = "none";
                     document.getElementById("customtypeTr").style.display = "";
                     dynamicCalculate();
-                } else if (thisisfor == 'newcuplingcustom'){
+                } else if (thisisfor == 'newcustomcupling'){
                     document.getElementById("cuplingtypeTr").style.display = "none";
                     document.getElementById("pockytypeTr").style.display = "none";
                     document.getElementById("cuplingtypeTr").style.display = "";
@@ -840,13 +857,10 @@
     </head> 
 
     <body onLoad="onReload()">
-    
-	<center>
+    	<center>
 		<div style="background-image:url(http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/background-bottom_test001.png~original) ;background-repeat:no-repeat;background-position:center bottom;padding:0px 0px 0px 0px;">
 		<div style="background-image:url(http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/background-top_test001-1.png~original) ;background-repeat:no-repeat;background-position:center 100px;">
         <h2><img src="http://img.photobucket.com/albums/v79/Mystaira/TGPS/RLCComm/rlcbanner_test002.png"></h2>
-
-		
 		<table>
             <tbody>
                 <tr>
@@ -859,7 +873,8 @@
                     </td>
                     <td>
                         <select id="thisisfor" name="thisisfor" onChange="onChangeType()">
-                            <option selected="selected" value="newcustom">New Custom Pocky Boy</option>
+                            <option selected="selected" value="newcustompocky">New Custom Pocky Boy</option>
+                            <option value="newcustomcupling">New Custom Cupling</option>
                             <option value="existingpocky">Existing Pocky Boy</option>
                         </select>
                     </td>
@@ -1087,7 +1102,5 @@
 			<div style="text-align:center;color:#BC8F8F;font-weight:bold;padding: 35px 0px 67px 0px;">All artwork © <a href="http://mystaira.deviantart.com/" style="color:#BC8F8F">Mystaira</a></div>
 			</div></div>
 	</center>
-
-
 	</body>
 </html>
