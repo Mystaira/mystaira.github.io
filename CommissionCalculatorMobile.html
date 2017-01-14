@@ -27,9 +27,9 @@
             
             function calculate(){
                 
-                var imageStyle = "<p/><b>Image Style:</b> ";
-                var backgroundStyle = "<p/><b>Background Style:</b> ";
-				var commissionformStyle = "<b>Commission Form:</b> ";
+                var imageStyle = '<p/><b><font color="#607D8B">Image Style:</font></b> ';
+                var backgroundStyle = '<p/><b><font color="#607D8B">Background Style:</font></b> ';
+				var commissionformStyle = '<b><font color="#607D8B">Commission Form:</font></b> ';
         
                 document.getElementById("resultsDiv").style.display = "none";
                 document.getElementById("stylingDiv").style.display = "none";
@@ -150,8 +150,8 @@
 								basePrice = 75.0;
 							}
                         
-							imageStyle += "Black & White with Screentone<br/>";
-							imageStyle += "<i>Flat black for dark colors, shaded with screentones. (one could call this manga-esque)</i><br/>";
+							imageStyle += '<font color="#607D8B">Black & White with Screentone</font><br/>';
+							imageStyle += '<i><font size="2em">Flat black for dark colors, shaded with screentones. (one could call this manga-esque)</font></i><br/>';
 							imageStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Taro320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Taro480w.jpg 480w" sizes="(min-width:37.976em) 30em, 20em" alt="Solia - Taro"><br><a href="http://mystaira.deviantart.com/art/Solia-Taro-115225330">Solia - Taro</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
                         
 						} else if (imagecolor == 'messycolorsketch') {
@@ -727,7 +727,7 @@
                         
                         commissionformStyle += "<br/>";
 						commissionformStyle += '<div id="commissionformStyleDiv" style="display:hidden;color:#646464;font-size:0.8em;"><b>!!</b> You can also ontact me questions on <a href="http://mystaira.deviantart.com/">DeviantART</a>, <a href="http://www.gaiaonline.com/profile/privmsg.php?mode=post&u=108102&_gaia_t_=726">Gaia Online</a>, <a href="https://www.facebook.com/Mystaira">Facebook</a>, <a href="http://mystaira.tumblr.com/">Tumblr</a>, <a href="https://twitter.com/Myst_Aira">Twitter</a>, or via email if you already have it.1</br></div>';  
-						commissionformStyle += '<table align="center" width="90%"><col width="100%"><tr><td><div style="height:80px;border:1px solid #ccc;text-align:left;color:#336333;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Regular, ';
+						commissionformStyle += '<table align="center" width="90%"><col width="100%"><tr><td><div style="height:80px;border:1px solid #ccc;text-align:left;color:#646464;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Regular, ';
 						if (imagesize == 'headshot'){
 							commissionformStyle += 'Headshot, ';
 						} else if (imagesize == 'bustup'){
@@ -812,7 +812,7 @@
                     } else if (imagestyle == 'childchibiart'){
                         
                         commissionformStyle += "<br/>";
-						commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#336333;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Child Chibi-esque, ';
+						commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;#646464;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Child Chibi-esque, ';
 						
 						if (imagesize == 'headshot'){
 							commissionformStyle += 'Headshot, ';
@@ -897,7 +897,7 @@
                     } else if (imagestyle == 'chibiart'){
                         
                         commissionformStyle += "<br/>";
-						commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#336333;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Chibi, ';
+						commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#646464;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;" contenteditable><b>Image Style, Size, and Color:</b> Chibi, ';
 						
 						if (imagesize == 'headshot'){
 							commissionformStyle += 'Headshot, ';
@@ -1189,7 +1189,7 @@
                         
                     }        
 					commissionformStyle += "<br/>";
-                    commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#336333;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Lineart Complexity and Color Style:</b> ';
+                    commissionformStyle += '<i>(Form is editable, but not submitable.)</i></br><table align="center" width="90%"><col width="50%"><tr><td><div style="height:150px;border:1px solid #ccc;text-align:left;color:#646464;font-size:0.8em;padding:0.5em;background-color:white;overflow:auto;"><b>Lineart Complexity and Color Style:</b> ';
 					if (colorjobcomplexity == 'simplecolorjob'){
                         commissionformStyle += 'Simple, ';
                     } else if (colorjobcomplexity == 'moderatecolorjob'){
@@ -1612,7 +1612,7 @@
                     </tr>
                     <tr style="background-color:#FDFFFA;">
                         <td style="background-color:#FDFFFA;">
-						<div style="display:hidden;height:500px;width:480px;text-align:center;color:#646464;font-size:1.0em;overflow:auto;">
+						<div style="display:hidden;height:666px;width:480px;text-align:center;color:#646464;font-size:1.0em;overflow:auto;">
 							<table>
 								<tr>
 									<td>
