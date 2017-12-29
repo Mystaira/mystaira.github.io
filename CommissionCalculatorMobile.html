@@ -19,11 +19,11 @@
 			
 			
             // currency rate
-            var usdeur = 0.94;
+            var usdeur = 0.84;
             var usdToPoints = 100;
-			var usdcad = 1.31;
-			var usdyen = 114.53
-			var usdyuan = 6.9
+			var usdcad = 1.22;
+			var usdyen = 111.22
+			var usdyuan = 6.54
             
             function calculate(){
                 
@@ -43,6 +43,7 @@
                 var colorjobcomplexity = document.getElementById("colorjobcomplexity").value;                
                 var imagecolor = document.getElementById("imagecolor").value;
                 var colorjobstyle = document.getElementById("colorjobstyle").value;
+                var detaillevel = document.getElementById("detaillevel").value;
                 var nrofcharacters = document.getElementById("nrofcharacters").value;
                 var backgroundtype = document.getElementById("backgroundtype").value;
                 var ressizetype = document.getElementById("ressizetype").value;
@@ -79,7 +80,7 @@
 							} else if (imagesize == '34thbody'){
 								basePrice = 7.5;
 							} else if (imagesize == 'fullbody'){
-								basePrice = 10.0;
+								basePrice = 10.0;								
 							}
                         
 							imageStyle += '<font color="#607D8B">Sketch</font><br/>';
@@ -135,8 +136,9 @@
                         
 							imageStyle += '<font color="#607D8B">Black & White</font><br/>';
 							imageStyle += '<font size="2em"><i>Done completely in flat black and white, with potentially shades of gray for distinctively different colors.</i></font><br/>';
-							imageStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/UkeMystBW320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/UkeMystBW480w.jpg 480w" sizes="(min-width:78.94736842105263em) 30em, 79vw" alt="Solia - Uke x Myst"><br><a href="http://mystaira.deviantart.com/art/Solia-Uke-x-Myst-111411866">Solia - Uke x Myst</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
-                        
+							imageStyle += '<img srcset="http://i.imgur.com/Rjn6701.jpg 320w, http://i.imgur.com/CAT4yap.jpg 480w" sizes="(min-width:78.94736842105263em) 30em, 79vw" alt="Solia - Uke x Myst"><br><a href="http://mystaira.deviantart.com/art/Solia-Uke-x-Myst-111411866">Solia - Uke x Myst</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							//UkeMystBW
+						
 						} else if (imagecolor == 'blackandwhitest') {
 							if (imagesize == 'headshot'){
 								basePrice = 20.0;
@@ -152,8 +154,9 @@
                         
 							imageStyle += '<font color="#607D8B">Black & White with Screentone</font><br/>';
 							imageStyle += '<font size="2em"><i>Flat black for dark colors, shaded with screentones. (one could call this manga-esque)</i></font><br/>';
-							imageStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Taro320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Taro480w.jpg 480w" sizes="(min-width:37.976em) 30em, 20em" alt="Solia - Taro"><br><a href="http://mystaira.deviantart.com/art/Solia-Taro-115225330">Solia - Taro</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
-                        
+							imageStyle += '<img srcset="http://i.imgur.com/.jpg 320w, http://i.imgur.com/.jpg 480w" sizes="(min-width:37.976em) 30em, 20em" alt="Solia - Taro"><br><a href="http://mystaira.deviantart.com/art/Solia-Taro-115225330">Solia - Taro</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							//Taro
+						
 						} else if (imagecolor == 'messycolorsketch') {
 							if (imagesize == 'headshot'){
 								basePrice = 15.0;
@@ -169,8 +172,9 @@
                         
 							imageStyle += '<font color="#607D8B">Messy Colored Sketch</font><br/>';
 							imageStyle += '<font size="2em"><i>Sketchy cleaned up a bit but not refined, messily colored, not always staying within the lines. Or <a href=http://mystaira.deviantart.com/art/Tempt-Headshot-Collage-202340651>lightly colored</a>.</i></font><br/>';
-							imageStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/ShissouKetaba_messy320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/ShissouKetaba_messy480w.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="Shissou Ketaba and Sakage - Messy"><br><a href="http://mystaira.deviantart.com/art/Shissou-Ketaba-and-Sakage-Messy-377014245">Shissou Ketaba and Sakage - Messy</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
-                        
+							imageStyle += '<img srcset="http://i.imgur.com/cmb8wk5.jpg 320w, http://i.imgur.com/75K5TUH.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="Shissou Ketaba and Sakage - Messy"><br><a href="http://mystaira.deviantart.com/art/Shissou-Ketaba-and-Sakage-Messy-377014245">Shissou Ketaba and Sakage - Messy</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>'; 
+							//ShissouKetaba_messy
+							
 						} else if (imagecolor == 'monochrome') {
 							if (imagesize == 'headshot'){
 								basePrice = 20.0;
@@ -204,7 +208,8 @@
 							imageStyle += '<font color="#607D8B">Lineless CG</font><br/>';
 							imageStyle += '<font size="2em"><i>Full CG colored directly from sketch stage without using the lines in the final version.</i></font><br/>';
 							imageStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Eumelian320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Eumelian480w.jpg 480w" sizes="(min-width:78.94736842105263em) 30em, 79vw" alt="Carbonated Seawater"><br><a href="http://mystaira.deviantart.com/art/Carbonated-Seawater-209010627">Carbonated Seawater</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
-						                        
+						    //Eumelian
+							
 						} //else if (imagecolor == 'fullcgrefined') {
 						//	if (imagesize == 'headshot'){
 						//		basePrice = 25.0;
@@ -655,6 +660,8 @@
                         } 
                     }
         
+
+		
                     if (backgroundtype == 'simplebg'){
                         
                         finalPrice1 += basePrice/20;
@@ -662,8 +669,8 @@
                         
                         backgroundStyle += "Simple Background<br/>";
 						backgroundStyle += "<i>Textures and/or easy to draw details. Also abstract backgrounds.</i><br/>";
-                        backgroundStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SC13_Mascot320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SC13_Mascot480w.jpg 480w"  sizes="(min-width:32em) 30em, 20em" alt="SakuraCon 2013 Mascot Entry"><br><a href="http://mystaira.deviantart.com/art/SakuraCon-2013-Mascot-Entry-342439138">SakuraCon 2013 Mascot Entry</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
-        
+                        backgroundStyle += '<img srcset="http://i.imgur.com/boqsYkA.jpg 320w, http://i.imgur.com/sqH5ZPW.jpg 480w"  sizes="(min-width:32em) 30em, 20em" alt="SakuraCon 2013 Mascot Entry"><br><a href="http://mystaira.deviantart.com/art/SakuraCon-2013-Mascot-Entry-342439138">SakuraCon 2013 Mascot Entry</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
+						//SC13_Mascot
                         
                     } else if (backgroundtype == 'complicatedbg'){
                         
@@ -672,8 +679,9 @@
                         
                         backgroundStyle += "Complicated Background<br/>";
 						backgroundStyle += "<i>More details, longer to draw. Landscapes and scenes fall under this. Also simple backgrounds with difficult hand-drawn details.</i><br/>";
-                        backgroundStyle += '<img srcset="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SummerBishie2016-320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SummerBishie2016-480w.jpg 480w"  sizes="(min-width:32em) 30em, 20em" alt="Summer Oasis"><br><a href="http://mystaira.deviantart.com/art/Summer-Oasis-643521901">Summer Oasis</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
-                        
+                        backgroundStyle += '<img srcset="http://i.imgur.com/T1CWOfc.jpg 320w, http://i.imgur.com/blva0ii.jpg 480w"  sizes="(min-width:32em) 30em, 20em" alt="Summer Oasis"><br><a href="http://mystaira.deviantart.com/art/Summer-Oasis-643521901">Summer Oasis</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
+                        //SummerBishie2016
+						
                     } else if (backgroundtype == 'nobg'){
                         
                         backgroundStyle += "No Background<br/>";
@@ -681,6 +689,19 @@
                         
                     }     
         
+					if (detaillevel == 'simpledetails'){
+						finalPrice1 += basePrice*0;
+						finalPrice2 += basePrice*0;
+							
+                    } else if (detaillevel == 'moderatedetails'){
+						finalPrice1 += basePrice*0.5;
+						finalPrice2 += basePrice*0.5;
+							
+					} else if (detaillevel == 'complicateddetails'){
+						finalPrice1 += basePrice*1;
+						finalPrice2 += basePrice*1;
+					}	
+						
                     if (ressizetype == 'fourbysix'){
 					
                         if (resolutiontype == 'lowres'){
@@ -1173,16 +1194,17 @@
                         finalPrice4 += basePrice/20;
                         
                         backgroundStyle += "Simple Background<br/>";
-                        backgroundStyle += '<img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SC13_Mascot320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SC13_Mascot480w.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="SakuraCon 2013 Mascot Entry"><br><a href="http://mystaira.deviantart.com/art/SakuraCon-2013-Mascot-Entry-342439138">SakuraCon 2013 Mascot Entry</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
-                        
+                        backgroundStyle += '<img src="http://i.imgur.com/boqsYkA.jpg 320w, http://i.imgur.com/sqH5ZPW.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="SakuraCon 2013 Mascot Entry"><br><a href="http://mystaira.deviantart.com/art/SakuraCon-2013-Mascot-Entry-342439138">SakuraCon 2013 Mascot Entry</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
+                        //SC13_Mascot
+						
                     } else if (backgroundtype == 'complicatedbg'){
                         
                         finalPrice3 += basePrice/10;
                         finalPrice4 += basePrice/5;
                         
                         backgroundStyle += "Complicated Background<br/>";
-                        backgroundStyle += '<img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SummerBishie2016-320w.jpg 320w, http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/SummerBishie2016-480w.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="Summer Oasis"><br><a href="http://mystaira.deviantart.com/art/Summer-Oasis-643521901">Summer Oasis</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
-                        
+                        backgroundStyle += '<img src="http://i.imgur.com/T1CWOfc.jpg 320w, http://i.imgur.com/blva0ii.jpg 480w" sizes="(min-width:32em) 30em, 20em" alt="Summer Oasis"><br><a href="http://mystaira.deviantart.com/art/Summer-Oasis-643521901">Summer Oasis</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a>';
+                       //SummerBishie2016 
                     } else if (backgroundtype == 'nobg'){
                         
                         backgroundStyle += "No Background<br/>";
@@ -1380,199 +1402,216 @@
 		
 		<table>
             <tbody>
-                <tr>
-				<td>
-					<div style="height:20em;width:40em;border:1px solid #ccc;font:0.75em/1.5em Georgia, Garamond, Serif;overflow:auto;background-color:#ffffff;">
-						<center><font color=red><b><font size=2.0em>«</font> IMPORTANT - PLEASE READ FROM BEGINNING TO END <font size=2.0em>»</font></b></font></center>
-						<center style="line-height:250%"><b><font size=2.0em>«</font> Terms of Use for Commissions <font size=2.0em>»</font></b></center>
-						➤ You may use the commissioned artwork for personal use only.<br/>
-						➤ You may NOT resell or use the commissioned artwork for commercial purposes without discussing it with me first. And if resale (adoptables/designs only) is approved, you may NOT sell it for more than you paid for it.<br/>
-						➤ You may NOT claim the artwork as your own and will issue credit as necessary. And please do not remove my signature without asking.<br/>
-						➤ As the artist, I have the right to display the artwork on DA or other sites. (I will however respect a commissioner's request to not display their commission on specific sites or at all online if they so request.)<br/>
-						
-						<center style="line-height:250%"><b>«Process of Commissioning:»</b></center>
-						<b>1 •</b> Send me a message with 'Commission' in the subject, with the commission form filled out.<br/>
-						<b>2 •</b> After looking it over and approving it, I will reply letting you know and provide you with my Paypal email. (Unless payment is in points.)<br/>
-						<b>3 •</b> You must send payment via Paypal (or DA for points) to my Paypal email. (please attach a note with your deviantArt (or wherever) username, and a brief summary of your commission(i.e. black haired demon man)). Please use the "goods and services" option and don't forget to select "no shipping required".<br/>
-						<b>4 •</b> I send you the final product. (with updates in between upon request)<br/>
-						
-						<center style="line-height:250%"><b>«Rules for Commissions:»</b></center>
-						➤ No deadlines please. I will try to finish your commission within a reasonable amount of time, but other workloads and lack of inspiration may delay the final product. You may ask if I could accept a deadline, but I cannot guarantee the quality of the final product if the deadline is too unreasonable.<br/>
-						➤ Once your commission is approved, you must send at least half (or all) of the payment upfront before I will start sketching. The final product will not be delivered until payment has been delivered in full.<br/>
-						➤ Upon request, I will provide updates of your commission. (watermarked if full payment hasn't been received yet.)<br/>
-						➤ If full payment was not received upfront, then when I finish I will send you a watermarked version of the finished piece for approval. After receiving full payment, I will send the final art without the watermark.<br/>
-						➤	➤ I can send higher resolution images via email if requested (as I can only upload so big without it getting resized). <i>{considering editing}</i><br/>
-								
-						<center style="line-height:250%"><b>«Other Information & Disclaimer:»</b></center>
-						➤ I'm still learning (always and forever) and am better at drawing some things than others. Check one of my galleries linked above to see examples.<br/>
-						➤ My art is all completely digital and created predominately in Paint Tool SAI or Clip Studio Paint with Wacom Intuos5 tablet.<br/>	
-						➤ If you do not have a deviantART account, you may contact me however you are able to. (ex. PM me on a forum (i.e. Gaia or Solia), another art site I am on (i.e. Toyhouse, Art Station, Artician), any social site (i.e. Facebook, Tumblr, Twitter), or you may email me if you already have my email. I may or may not respond to PMs from other sites since I may not be active on them.)<br/>							
-						
-						➤ I'm always willing to try drawing new things, so feel free to ask if I am up to drawing something if there isn't any examples of it in my gallery.<br/>
-						➤ I am open to nude/erotic/ecchi/yaoi commissions. Though I ask for your requests to be tasteful. Any depiction of hardcore sexual content, hentai, or anything generally "inappropriate" will for the most part be denied immediately, no exceptions. If you're confused, feel free to ask me and I'll let you know.
-					</div>
-					</td>
-			</tr><tr>
+				<tr>
 					<td>
-        <table style="background-color:#FDFFFA;" width="480px">
-            <tbody>
-                <tr id="typeTr">
-                    <td width="160px" style="color:#607D8B">
-                        <label>Type:</label>
-                    </td>
-                    <td>
-                        <select id="type" name="type" onChange="onChangeType()">
-                            <option selected="selected" value="singleimagereg">Single Image (Full Art)</option>
-                            <option value="colorjob">Color Job (of pre-existing art)</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="imagestyleTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Image Style:</label>
-                    </td>
-                    <td>
-                        <select id="imagestyle" name="imagestyle" onChange="dynamicCalculate()">
-                            <option selected="selected" value="regularart">Regular</option>
-							<option value="childchibiart">Child Chibi-esque</option>
-                            <option value="chibiart">Chibi</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="imagesizeTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Image Size:</label>
-                    </td>
-                    <td>
-                        <select id="imagesize" name="imagesize" onChange="dynamicCalculate()">
-                            <option selected="selected" value="headshot">Headshot</option>
-                            <option value="bustup">Bust</option>
-                            <option value="waistup">Waist-up</option>
-                            <option value="34thbody">3/4th Body</option>
-                            <option value="fullbody">Fullbody</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="colorjobcomplexityTr" style="display:none;">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Color Job Complexity:</label>
-                    </td>
-                    <td>
-                        <select id="colorjobcomplexity" name="colorjobcomplexity" onChange="dynamicCalculate()">
-                            <option selected="selected" value="simplecolorjob">Simple</option>
-                            <option value="moderatecolorjob">Moderate</option>
-                            <option value="complexcolorjob">Complex</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="imagecolorTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Image Color:</label>
-                    </td>
-                    <td>
-                        <select id="imagecolor" name="imagecolor" onChange="dynamicCalculate()">
-                            <option selected="selected" value="sketch">Sketch</option>
-                            <.option value="refinedsketch">Refined Sketch</option>
-                            <option value="lineart">Lineart</option>
-                            <option value="blackandwhiteart">B&W</option>
-                            <option value="blackandwhitest">B&W w/ Screentone</option>
-                            <option value="messycolorsketch">Messy Colored Sketch</option>
-                            <option value="monochrome">Monochrome (Single Color)</option>
-                            <option value="linelesscg">Lineless CG</option>
-                            <.option value="fullcgrefined">Full CG (Refined Sketch)</option>
-                            <option value="fullcglines">Full CG (Lineart)</option>
-                            <option value="experimental">Experimental</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="colorjobstyleTr" style="display:none;">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Coloring Style:</label>
-                    </td>
-                    <td>
-                        <select id="colorjobstyle" name="colorjobstyle" onChange="dynamicCalculate()">
-                            <option selected="selected" value="flat">Flat</option>
-                            <option value="messysimple">Messy Simple</option>
-                            <option value="messydetailed">Messy Detailed</option>
-                            <option value="blackandwhite">Black & White</option>
-                            <option value="monochrome">Monochrome</option>
-                            <option value="lineless">Lineless</option>
-                            <option value="cg">CG</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr id="nrofcharactersTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Number of characters:</label>
-                    </td>
-                    <td>
-                        <input id="nrofcharacters" name="nrofcharacters" value="1" type="text" onChange="dynamicCalculate()">
-                    </td>
-                </tr>
-                <tr id="backgroundtypeTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Background Type:</label>
-                    </td>
-                    <td>
-                        <select id="backgroundtype" name="backgroundtype" onChange="dynamicCalculate()">
-                            <option selected="selected" value="nobg">No Background</option>
-                            <option value="simplebg">Simple Background</option>
-                            <option value="complicatedbg">Complicated Background</option>
-                        </select>
-                    </td>
-                </tr>
-				<tr id="ressizetypeTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Size:</label>
-                    </td>
-                    <td>
-                        <select id="ressizetype" name="ressizetype" onChange="dynamicCalculate()">
-                            <option selected="selected" value="fourbysix">4x6"</option>
-                            <option value="eightbyten">8x10"</option>
-                            <option value="elevenbyseventeen">11x17"</option>
-                        </select>
-                    </td>
-                </tr>
-				<tr id="resolutiontypeTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Resolution:</label>
-                    </td>
-                    <td>
-                        <select id="resolutiontype" name="resolutiontype" onChange="dynamicCalculate()">
-                            <option selected="selected" value="lowres">Low-res (72 DPI)</option>
-                            <option value="hires">Hi-Res (300DPI)</option>
-                            <option value="ultrahires">Ultra-Hi-Res (600DPI)</option>
-                        </select>
-                    </td>
-                </tr>
-				<tr id="paymenttypeTr">
-                    <td width="100px" style="color:#607D8B">
-                        <label>Payment Type:</label>
-                    </td>
-                    <td>
-                        <select id="paymenttype" name="paymenttype" onChange="dynamicCalculate()">
-                            <option selected="selected" value="usdpayment">$ USD</option>
-                            <option value="europayment">€ Euros </option>
-                            <option value="dapointspayment">DeviantART Points</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td width="100px">&nbsp;</td>
-                    <td>
-                        <input value="calculate" onclick="calculate()" type="button">
-                        <input value="reset" onclick="reset()" type="button">
-                        <input value="0" type="hidden" id="isAfterFirstCalculation">
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+						<div style="height:20em;width:40em;border:1px solid #ccc;font:0.75em/1.5em Georgia, Garamond, Serif;overflow:auto;background-color:#ffffff;">
+							<center><font color=red><b><font size=2.0em>«</font> IMPORTANT - PLEASE READ FROM BEGINNING TO END <font size=2.0em>»</font></b></font></center>
+							<center style="line-height:250%"><b><font size=2.0em>«</font> Terms of Use for Commissions <font size=2.0em>»</font></b></center>
+							➤ You may use the commissioned artwork for personal use only.<br/>
+							➤ You may NOT resell or use the commissioned artwork for commercial purposes without discussing it with me first. And if resale (adoptables/designs only) is approved, you may NOT sell it for more than you paid for it.<br/>
+							➤ You may NOT claim the artwork as your own and will issue credit as necessary. And please do not remove my signature without asking.<br/>
+							➤ As the artist, I have the right to display the artwork on DA or other sites. (I will however respect a commissioner's request to not display their commission on specific sites or at all online if they so request.)<br/>
+							
+							<center style="line-height:250%"><b>«Process of Commissioning:»</b></center>
+							<b>1 •</b> Send me a message with 'Commission' in the subject, with the commission form filled out.<br/>
+							<b>2 •</b> After looking it over and approving it, I will reply letting you know and provide you with my Paypal email. (Unless payment is in points.)<br/>
+							<b>3 •</b> You must send payment via Paypal (or DA for points) to my Paypal email. (please attach a note with your deviantArt (or wherever) username, and a brief summary of your commission(i.e. black haired demon man)). Please use the "goods and services" option and don't forget to select "no shipping required".<br/>
+							<b>4 •</b> I send you the final product. (with updates in between upon request)<br/>
+							
+							<center style="line-height:250%"><b>«Rules for Commissions:»</b></center>
+							➤ No deadlines please. I will try to finish your commission within a reasonable amount of time, but other workloads and lack of inspiration may delay the final product. You may ask if I could accept a deadline, but I cannot guarantee the quality of the final product if the deadline is too unreasonable.<br/>
+							➤ Once your commission is approved, you must send at least half (or all) of the payment upfront before I will start sketching. The final product will not be delivered until payment has been delivered in full.<br/>
+							➤ Upon request, I will provide updates of your commission. (watermarked if full payment hasn't been received yet.)<br/>
+							➤ If full payment was not received upfront, then when I finish I will send you a watermarked version of the finished piece for approval. After receiving full payment, I will send the final art without the watermark.<br/>
+							➤	➤ I can send higher resolution images via email if requested (as I can only upload so big without it getting resized). <i>{considering editing}</i><br/>
+									
+							<center style="line-height:250%"><b>«Other Information & Disclaimer:»</b></center>
+							➤ I'm still learning (always and forever) and am better at drawing some things than others. Check one of my galleries linked above to see examples.<br/>
+							➤ My art is all completely digital and created predominately in Paint Tool SAI or Clip Studio Paint with Wacom Intuos5 tablet.<br/>	
+							➤ If you do not have a deviantART account, you may contact me however you are able to. (ex. PM me on a forum (i.e. Gaia or Solia), another art site I am on (i.e. Toyhouse, Art Station, Artician), any social site (i.e. Facebook, Tumblr, Twitter), or you may email me if you already have my email. I may or may not respond to PMs from other sites since I may not be active on them.)<br/>							
+							
+							➤ I'm always willing to try drawing new things, so feel free to ask if I am up to drawing something if there isn't any examples of it in my gallery.<br/>
+							➤ I am open to nude/erotic/ecchi/yaoi commissions. Though I ask for your requests to be tasteful. Any depiction of hardcore sexual content, hentai, or anything generally "inappropriate" will for the most part be denied immediately, no exceptions. If you're confused, feel free to ask me and I'll let you know.
+						</div>
+					</td>
+				</tr><tr>
+					<td>
+						<table style="background-color:#FDFFFA;" width="480px">
+							<tbody>
+								<tr id="typeTr">
+									<td width="160px" style="color:#607D8B">
+										<label>Type:</label>
+									</td>
+									<td>
+										<select id="type" name="type" onChange="onChangeType()">
+											<option selected="selected" value="singleimagereg">Single Image (Full Art)</option>
+											<option value="colorjob">Color Job (of pre-existing art)</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="imagestyleTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Image Style:</label>
+									</td>
+									<td>
+										<select id="imagestyle" name="imagestyle" onChange="dynamicCalculate()">
+											<option selected="selected" value="regularart">Regular</option>
+											<option value="childchibiart">Child Chibi-esque</option>
+											<option value="chibiart">Chibi</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="imagesizeTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Image Size:</label>
+									</td>
+									<td>
+										<select id="imagesize" name="imagesize" onChange="dynamicCalculate()">
+											<option selected="selected" value="headshot">Headshot</option>
+											<option value="bustup">Bust</option>
+											<option value="waistup">Waist-up</option>
+											<option value="34thbody">3/4th Body</option>
+											<option value="fullbody">Fullbody</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="colorjobcomplexityTr" style="display:none;">
+									<td width="100px" style="color:#607D8B">
+										<label>Color Job Complexity:</label>
+									</td>
+									<td>
+										<select id="colorjobcomplexity" name="colorjobcomplexity" onChange="dynamicCalculate()">
+											<option selected="selected" value="simplecolorjob">Simple</option>
+											<option value="moderatecolorjob">Moderate</option>
+											<option value="complexcolorjob">Complex</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="imagecolorTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Image Color:</label>
+									</td>
+									<td>
+										<select id="imagecolor" name="imagecolor" onChange="dynamicCalculate()">
+											<option selected="selected" value="sketch">Sketch</option>
+											<.option value="refinedsketch">Refined Sketch</option>
+											<option value="lineart">Lineart</option>
+											<option value="blackandwhiteart" disabled>{B&W}</option>
+											<option value="blackandwhitest" disabled>{B&W w/ Screentone}</option>
+											<option value="messycolorsketch" disabled>{Messy Colored Sketch}</option>
+											<option value="monochrome" disabled>{Monochrome (Single Color)}</option>
+											<option value="linelesscg">Lineless CG</option>
+											<.option value="fullcgrefined">Full CG (Refined Sketch)</option>
+											<option value="fullcglines">Full CG (Lineart)</option>
+											<option value="experimental">Experimental</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="colorjobstyleTr" style="display:none;">
+									<td width="100px" style="color:#607D8B">
+										<label>Coloring Style:</label>
+									</td>
+									<td>
+										<select id="colorjobstyle" name="colorjobstyle" onChange="dynamicCalculate()">
+											<option selected="selected" value="flat">Flat</option>
+											<option value="messysimple">Messy Simple</option>
+											<option value="messydetailed">Messy Detailed</option>
+											<option value="blackandwhite">Black & White</option>
+											<option value="monochrome">Monochrome</option>
+											<option value="lineless">Lineless</option>
+											<option value="cg">CG</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="detaillevelTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Level of Details/Design *:</label>
+									</td>
+									<td>
+										<select id="detaillevel" name="detaillevel" onChange="dynamicCalculate()">
+											<option selected="selected" value="simpledetails">Simple Design</option>
+											<option value="moderatedetails">Moderate Design</option>
+											<option value="complicateddetails">Complicated/Complex Design</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="nrofcharactersTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Number of characters:</label>
+									</td>
+									<td>
+										<input id="nrofcharacters" name="nrofcharacters" value="1" type="text" onChange="dynamicCalculate()">
+									</td>
+								</tr>
+								<tr id="backgroundtypeTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Background Type:</label>
+									</td>
+									<td>
+										<select id="backgroundtype" name="backgroundtype" onChange="dynamicCalculate()">
+											<option selected="selected" value="nobg">No Background</option>
+											<option value="simplebg">Simple Background</option>
+											<option value="complicatedbg">Complicated Background</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="ressizetypeTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Size:</label>
+									</td>
+									<td>
+										<select id="ressizetype" name="ressizetype" onChange="dynamicCalculate()">
+											<option selected="selected" value="fourbysix">4x6"</option>
+											<option value="eightbyten">8x10"</option>
+											<option value="elevenbyseventeen">11x17"</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="resolutiontypeTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Resolution:</label>
+									</td>
+									<td>
+										<select id="resolutiontype" name="resolutiontype" onChange="dynamicCalculate()">
+											<option selected="selected" value="lowres">Low-res (72 DPI)</option>
+											<option value="hires">Hi-Res (300DPI)</option>
+											<option value="ultrahires">Ultra-Hi-Res (600DPI)</option>
+										</select>
+									</td>
+								</tr>
+								<tr id="paymenttypeTr">
+									<td width="100px" style="color:#607D8B">
+										<label>Payment Type:</label>
+									</td>
+									<td>
+										<select id="paymenttype" name="paymenttype" onChange="dynamicCalculate()">
+											<option selected="selected" value="usdpayment">$ USD</option>
+											<option value="europayment">€ Euros </option>
+											<option value="dapointspayment">DeviantART Points</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td width="100px">&nbsp;</td>
+									<td>
+										<input value="calculate" onclick="calculate()" type="button">
+										<input value="reset" onclick="reset()" type="button">
+										<input value="0" type="hidden" id="isAfterFirstCalculation">
+									</td>
+								</tr>
+							</tbody>
+						</table>
 		            </td>
-					
                 </tr>
+				<tr>
+					<td width="100%" style="color:#607D8B;font-size:0.7em">* Please keep in mind that I have final determination on detail level, so try to err on the side of higher details when considering your budget.</td>
+				</tr>
+				<tr>
+					<td width="100%" style="color:#607D8B;font-size:0.6em"><i>Simple: Simple design with simple details. </br>Moderate: Moderate design with simple details [OR] simple design with non-complex details.</br>Complex: Moderate design with complex details or complex design.</i></td>
+				</tr>
             </tbody>
         </table>
-        <br></div>
+        </div>
         <div id="resultsDiv" style="display:none;color:blue;background-color:white;font-size:1.5em;width:20.667em;border:1px solid #ccc;">&nbsp;</div>
         <div style="height:0.7em;line-height:50%;"></div>
         <div id="stylingDiv" style="display:none">
@@ -1599,7 +1638,7 @@
                             <div id="commissionformStyleDiv" style="display:hidden;text-align:center;color:#646464;font-size:1.0em;padding-left:2em;padding-right:2em;">&nbsp;</div>
                         </td>
                     </tr>
-					<tr><td><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdTNBy70SCPXPHfF-o478-0xhjJG4u9d-aePbDFTuKwgMed3g/viewform?embedded=true" width="480" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></td>
+					<tr><td><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdk0QyNE8hgz3ltEic50XTUjc6XN0YpZQTNcdHTCx8jlMFjsQ/viewform?embedded=true" width="480" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></td>
 					</tr>
                 </tbody>
             </table><p>
@@ -1618,28 +1657,28 @@
 								<tr>
 									<td>
 										<div style="display:hidden;text-align:center;color:#646464;font-size:1.0em;">
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Faun480w.jpg" width="445" alt="Commission - Faun"><br><a href="http://mystaira.deviantart.com/art/Commission-Faun-541873734"">Commission - Faun</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_AquaEeveeMessycolor480w.jpg" width="445" alt="Commission - AquaEevee"><br><a href="http://mystaira.deviantart.com/art/Commission-AquaEevee-424290119">Commission - AquaEevee</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Risenbahn480w.jpg" width="445" alt="Commission - Risenbahn and Silver"><br><a href="http://mystaira.deviantart.com/art/Commission-Risenbahn-and-Silver-400816753">Commission - Risenbahn and Silver</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>										
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Krypto480w.jpg" width="445" alt="Commission: Krypto"><br><a href="http://mystaira.deviantart.com/art/Commission-Krypto-205303005">Commission: Krypto</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_iiRaZi480w.jpg" width="445" alt="Gaia Commission - iiRaZi"><br><a href="http://mystaira.deviantart.com/art/Gaia-Commission-iiRaZi-190568468">Gaia Commission - iiRaZi</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_MBruce_Caleb480w.jpg" width="445" alt="Commission: Caleb"><br><a href="http://mystaira.deviantart.com/art/Commission-Caleb-178574082">Commission: Caleb</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Miranda480w.jpg" width="445" alt="Commission: Miranda"><br><a href="http://mystaira.deviantart.com/art/Commission-Miranda-178572720">Commission: Miranda</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Gabriel-KaedeSeijiA480w.jpg" width="445" alt="Commission: Kaede and Seiji"><br><a href="http://mystaira.deviantart.com/art/Commission-Kaede-and-Seiji-176420393">Commission: Kaede and Seiji</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Cohesion480w.jpg" width="445" alt="Gaia Commission - Cohesion"><br><a href="http://mystaira.deviantart.com/art/Gaia-Commission-Cohesion-134020107">Gaia Commission - Cohesion</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_JadeHakai480w.jpg" width="445" alt="Commission: For JadeHakai"><br><a href="http://mystaira.deviantart.com/art/Commission-For-JadeHakai-124055342">Commission: For JadeHakai</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Solia_Mirith480w.jpg" width="445" alt="Solia Commission - Mirith"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Mirith-115223775">Solia Commission - Mirith</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Avon480w.jpg" width="445" alt="Commission: Avon"><br><a href="http://mystaira.deviantart.com/art/Commission-Avon-113292856">Commission: Avon</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Kessiah480w.jpg" width="445" alt="Solia - Kessiah"><br><a href="http://mystaira.deviantart.com/art/Solia-Kessiah-111411112">Solia - Kessiah</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Moonbeam480w.jpg" width="445" alt="Commission: Moonbeam"><br><a href="http://mystaira.deviantart.com/art/Commission-Moonbeam-207972549">Commission: Moonbeam</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_TemptHeadshots480w.jpg" width="445" alt="Tempt - Headshot Collage"><br><a href="http://mystaira.deviantart.com/art/Tempt-Headshot-Collage-202340651">Tempt - Headshot Collage</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Tawni_ZackAvine480w.jpg" width="445" alt="Commission: Zack Fair x Avine"><br><a href="http://mystaira.deviantart.com/art/Commission-Zack-Fair-x-Avine-183249647">Commission: Zack Fair x Avine</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_KevinCallie480w.jpg" width="445" alt="Commission: Okaeri"><br><a href="http://mystaira.deviantart.com/art/Commission-Okaeri-145967588">Commission: Okaeri</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Lilahnee480w.jpg" width="445" alt="Solia - Lilahnee"><br><a href="http://mystaira.deviantart.com/art/Solia-Lilahnee-124056274">Solia - Lilahnee</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/Taro480w.jpg" width="445" alt="Solia - Taro"><br><a href="http://mystaira.deviantart.com/art/Solia-Taro-115225330">Solia - Taro</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_DrLling480w.jpg" width="445" alt="Solia Commission - Dr. L'ling"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Dr-L-ling-114372706">Solia Commission - Dr. L'ling</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_Solia_Airu480w.jpg" width="445" alt="Solia Commission - Airu"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Airu-115222374">Solia Commission - Airu</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
-										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://img.photobucket.com/albums/v79/Mystaira/ACCexamples/z_Commish_ArcanosCyr480w.jpg" width="445" alt="GaiaCommission - Arcanos x Cyr"><br><a href="http://mystaira.deviantart.com/art/GaiaCommission-Arcanos-x-Cyr-104460593">GaiaCommission - Arcanos x Cyr</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/GmGZfba.jpg" width="445" alt="Commission - Faun"><br><a href="http://mystaira.deviantart.com/art/Commission-Faun-541873734"">Commission - Faun</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/EhLE85G.jpg" width="445" alt="Commission - AquaEevee"><br><a href="http://mystaira.deviantart.com/art/Commission-AquaEevee-424290119">Commission - AquaEevee</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/eENuYZ0.jpg" width="445" alt="Commission - Risenbahn and Silver"><br><a href="http://mystaira.deviantart.com/art/Commission-Risenbahn-and-Silver-400816753">Commission - Risenbahn and Silver</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>										
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/hkBE3Oe.jpg" width="445" alt="Commission: Krypto"><br><a href="http://mystaira.deviantart.com/art/Commission-Krypto-205303005">Commission: Krypto</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/9JqxQUM.jpg" width="445" alt="Gaia Commission - iiRaZi"><br><a href="http://mystaira.deviantart.com/art/Gaia-Commission-iiRaZi-190568468">Gaia Commission - iiRaZi</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/aNVJNJp.jpg" width="445" alt="Commission: Caleb"><br><a href="http://mystaira.deviantart.com/art/Commission-Caleb-178574082">Commission: Caleb</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/zKBFxTm.jpg" width="445" alt="Commission: Miranda"><br><a href="http://mystaira.deviantart.com/art/Commission-Miranda-178572720">Commission: Miranda</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/6Oi3Oem.jpg" width="445" alt="Commission: Kaede and Seiji"><br><a href="http://mystaira.deviantart.com/art/Commission-Kaede-and-Seiji-176420393">Commission: Kaede and Seiji</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/HPAfX3z.jpg" width="445" alt="Gaia Commission - Cohesion"><br><a href="http://mystaira.deviantart.com/art/Gaia-Commission-Cohesion-134020107">Gaia Commission - Cohesion</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/QGxQd2q.jpg" width="445" alt="Commission: For JadeHakai"><br><a href="http://mystaira.deviantart.com/art/Commission-For-JadeHakai-124055342">Commission: For JadeHakai</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/3iN01CW.jpg" width="445" alt="Solia Commission - Mirith"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Mirith-115223775">Solia Commission - Mirith</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/OwJXZv7.jpg" width="445" alt="Commission: Avon"><br><a href="http://mystaira.deviantart.com/art/Commission-Avon-113292856">Commission: Avon</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/ou8THbq.jpg" width="445" alt="Solia - Kessiah"><br><a href="http://mystaira.deviantart.com/art/Solia-Kessiah-111411112">Solia - Kessiah</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/9Lp6yAk.jpg" width="445" alt="Commission: Moonbeam"><br><a href="http://mystaira.deviantart.com/art/Commission-Moonbeam-207972549">Commission: Moonbeam</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/5rfyXRG.jpg" width="445" alt="Tempt - Headshot Collage"><br><a href="http://mystaira.deviantart.com/art/Tempt-Headshot-Collage-202340651">Tempt - Headshot Collage</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/WQSoG6p.jpg" width="445" alt="Commission: Zack Fair x Avine"><br><a href="http://mystaira.deviantart.com/art/Commission-Zack-Fair-x-Avine-183249647">Commission: Zack Fair x Avine</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/RA1TD52.jpg" width="445" alt="Commission: Okaeri"><br><a href="http://mystaira.deviantart.com/art/Commission-Okaeri-145967588">Commission: Okaeri</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/YUYpPX4.jpg" width="445" alt="Solia - Lilahnee"><br><a href="http://mystaira.deviantart.com/art/Solia-Lilahnee-124056274">Solia - Lilahnee</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/9tgEQz7.jpg" width="445" alt="Solia - Taro"><br><a href="http://mystaira.deviantart.com/art/Solia-Taro-115225330">Solia - Taro</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/CNwzXf3.jpg" width="445" alt="Solia Commission - Dr. L'ling"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Dr-L-ling-114372706">Solia Commission - Dr. L'ling</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/otxrcqr.jpg" width="445" alt="Solia Commission - Airu"><br><a href="http://mystaira.deviantart.com/art/Solia-Commission-Airu-115222374">Solia Commission - Airu</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div></p>
+										<div style="background-color:#fff;border:1px solid #ddd;"><img src="http://i.imgur.com/Y7CYShI.jpg" width="445" alt="GaiaCommission - Arcanos x Cyr"><br><a href="http://mystaira.deviantart.com/art/GaiaCommission-Arcanos-x-Cyr-104460593">GaiaCommission - Arcanos x Cyr</a> by ~<a class="u" href="http://mystaira.deviantart.com/">Mystaira</a> on <a href="http://www.deviantart.com">deviantART</a></div>
 										</div>
 									</td>
 								</tr>
