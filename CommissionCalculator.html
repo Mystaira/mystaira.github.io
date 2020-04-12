@@ -19,12 +19,12 @@
 			
 			
             // currency rate
-            var usdeur = 0.92;
+            var usdeur = 0.91;
             var usdToPoints = 100;
-			var usdcad = 1.32;
-			var usdyen = 109.88
-			var usdyuan = 6.98
-			var usdaud = 1.49
+			var usdcad = 1.40;
+			var usdyen = 108.35
+			var usdyuan = 7.04
+			var usdaud = 1.58
             
             function calculate(){
                 
@@ -91,32 +91,32 @@
 							
 						} else if (imagecolor == 'refinedsketch') {
 							if (imagesize == 'headshot'){
-								basePrice = 7.5;
-							} else if (imagesize == 'bustup'){
 								basePrice = 10.0;
+							} else if (imagesize == 'bustup'){
+								basePrice = 15.0;
 							} else if (imagesize == 'waistup'){
-								basePrice = 20.0;
-							} else if (imagesize == '34thbody'){
 								basePrice = 25.0;
-							} else if (imagesize == 'fullbody'){
+							} else if (imagesize == '34thbody'){
 								basePrice = 30.0;
+							} else if (imagesize == 'fullbody'){
+								basePrice = 35.0;
 							}
                         
 							imageStyle += '<font color="#607D8B">Refined Sketch</font><br/>';
-							imageStyle += '<font size="2em"><i>Cleaned up and refined lines, but not cleanly inked.</i></font><br/>';
-							imageStyle += 'NEED EXAMPLE<br/><i>(I do not currently have an example uploaded on DA, look at Full CG (Refined Sketch) for an idea.</i>'; 
+							imageStyle += '<font size="2em"><i>Cleaned up and refined sketch lines (also just how my sketching leans since I like things not being messy), but not cleanly inked.</i></font><br/>';
+							imageStyle += 'NEED ADD EXAMPLE<br/><i>(I have an example, I just need to get it uploaded and added in here...)</i>'; 
                         							
 						} else if (imagecolor == 'lineart') {
 							if (imagesize == 'headshot'){
-								basePrice = 7.5;
+								basePrice = 15.0;
 							} else if (imagesize == 'bustup'){
-								basePrice = 10.0;
-							} else if (imagesize == 'waistup'){
 								basePrice = 20.0;
-							} else if (imagesize == '34thbody'){
-								basePrice = 25.0;
-							} else if (imagesize == 'fullbody'){
+							} else if (imagesize == 'waistup'){
 								basePrice = 30.0;
+							} else if (imagesize == '34thbody'){
+								basePrice = 35.0;
+							} else if (imagesize == 'fullbody'){
+								basePrice = 40.0;
 							}
                         
 							imageStyle += '<font color="#607D8B">Lineart</font><br/>';
@@ -1628,7 +1628,7 @@
 						<div style="height:15em;width:40em;border:1px solid #ccc;font:0.75em/1.5em Georgia, Garamond, Serif;overflow:auto;background-color:#ffffff;">
 							<center style="line-height:250%"><b><font size=2.0em>«</font> Terms of Use for Commissions <font size=2.0em>»</font></b></center>
 							➤ You may use the commissioned artwork for personal use only (unless specifically commissioned for commercial purposes).<br/>
-							➤ You may NOT resell or use the commissioned artwork for commercial purposes without discussing it with me first (I like to know who . And if resale (adoptables/designs only) is approved, you may NOT sell it for more than you paid for it.<br/>
+							➤ You may NOT resell or use the commissioned artwork for commercial purposes without discussing it with me first (for designs, I like to know who is the one using the design). And if resale (adoptables/designs only) is approved, you may NOT sell it for more than you paid for it.<br/>
 							➤ You may NOT claim the artwork as your own and will issue credit as necessary. And please do not remove my signature without asking.<br/>
 							➤ As the artist, I have the right to display the artwork. (I will however respect a commissioner's request to not display their commission on specific sites or at all online if they so request.)<br/>
 							
@@ -1708,8 +1708,8 @@
 									</td>
 									<td>
 										<select id="imagecolor" name="imagecolor" onChange="dynamicCalculate()">
-											<option selected="selected" value="sketch">Sketch</option>
-											<.option value="refinedsketch">Refined Sketch</option>
+											<.option selected="selected" value="sketch">Sketch</option>
+											<option value="refinedsketch">Refined Sketch "I Can't Believe It's Not Lineart"</option>
 											<option value="lineart">Lineart</option>
 											<.option value="blackandwhiteart" disabled>{B&W}</option>
 											<.option value="blackandwhitest" disabled>{B&W w/ Screentone}</option>
